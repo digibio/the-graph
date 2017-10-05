@@ -1,3 +1,5 @@
+const React = require('react')
+const ReactDOM = require('react-dom')
 
 var thumb = require('../the-graph-thumb/the-graph-thumb.js');
 

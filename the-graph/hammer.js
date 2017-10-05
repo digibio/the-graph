@@ -1,3 +1,4 @@
+const Hammer = require('hammerjs')
 // Contains code from hammmer.js
 // https://github.com/hammerjs/hammer.js
 // The MIT License (MIT)

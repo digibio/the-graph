@@ -1,3 +1,5 @@
+const React = require('react')
+const ReactDOM = require('react-dom')
 var arcs = require('./arcs');
 
 module.exports.register = function (context) {

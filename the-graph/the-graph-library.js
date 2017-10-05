@@ -1,3 +1,5 @@
+const React = require('react')
+const ReactDOM = require('react-dom')
 // Component library functionality
 function mergeComponentDefinition(component, definition) {
   // In cases where a component / subgraph ports change,

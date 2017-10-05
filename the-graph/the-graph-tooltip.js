@@ -1,3 +1,5 @@
+const React = require('react')
+const ReactDOM = require('react-dom')
 var defaultFactories = require('./factories.js');
 var merge = require('./merge.js');
 

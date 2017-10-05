@@ -1,3 +1,5 @@
+const React = require('react')
+const ReactDOM = require('react-dom')
 var TooltipMixin = require('./mixins').Tooltip;
 
 module.exports.register = function (context) {
