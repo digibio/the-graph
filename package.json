@@ -5,6 +5,10 @@
   "author": "Forrest Oliphant, the Grid",
   "license": "MIT",
   "main": "index.js",
+  "peerDependencies": {
+    "react": "15.6.1",
+    "react-dom": "15.6.1"
+  },
   "dependencies": {
     "@pleasetrythisathome/react.animate": "0.0.4",
     "ease-component": "^1.0.0",
