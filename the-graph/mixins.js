@@ -24,9 +24,7 @@ var Tooltip = {
     var tooltipEvent = new CustomEvent('the-graph-tooltip-hide', { 
       bubbles: true
     });
-    if (this.isMounted()) {
-      ReactDOM.findDOMNode(this).dispatchEvent(tooltipEvent);
-    }
+    ReactDOM.findDOMNode(this).dispatchEvent(tooltipEvent);
   },
   componentDidMount: function () {
     if (navigator && navigator.userAgent.indexOf("Firefox") !== -1) {
@@ -37,6 +35,11 @@ var Tooltip = {
     tooltipper.addEventListener("tap", this.showTooltip);
     tooltipper.addEventListener("mouseenter", this.showTooltip);
     tooltipper.addEventListener("mouseleave", this.hideTooltip);
+  }
+  componendWillUnmount: () => {
+    tooltipper.removeEventListener("tap")
+    tooltipper.removeEventListener("mouseenter")
+    tooltipper.removeEventListener("mouseleave")
   }
 };
 
