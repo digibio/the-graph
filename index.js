@@ -1,3 +1,6 @@
+global.React = require('react')
+global.Hammer = require('hammerjs')
+global.ReactDOM = require('react-dom')
 
 // Module object
 var TheGraph = {};
