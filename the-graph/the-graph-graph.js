@@ -112,6 +112,10 @@ module.exports.register = function (context) {
     componentDidMount: function () {
         this.subscribeGraph(null, this.props.graph);
         ReactDOM.findDOMNode(this).addEventListener("the-graph-node-remove", this.removeNode);
+        this.mounted = true;
+    },
+    componentWillUnmount() {
+      this.mounted = false;
     },
     componentWillReceiveProps: function(nextProps) {
       this.subscribeGraph(this.props.graph, nextProps.graph);
@@ -420,14 +424,10 @@ module.exports.register = function (context) {
       window.requestAnimationFrame(this.triggerRender);
     },
     triggerRender: function (time) {
-      if (!this.isMounted()) {
-        return;
+      if (this.mounted && ! this.dirty) {
+        this.dirty = true;
+        this.forceUpdate();
       }
-      if (this.dirty) {
-        return;
-      }
-      this.dirty = true;
-      this.forceUpdate();
     },
     shouldComponentUpdate: function () {
       // If ports change or nodes move, then edges need to rerender, so we do the whole graph
