@@ -118,7 +118,7 @@ module.exports.register = function (context) {
   }
 
   var mixins = [];
-  if (window.React.Animate) {
+  if (React.Animate) {
     mixins.push(React.Animate);
   }
 
