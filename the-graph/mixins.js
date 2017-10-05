@@ -1,3 +1,5 @@
+const React = require('react')
+const ReactDOM = require('react-dom')
 // React mixins
 
 // Show fake tooltip

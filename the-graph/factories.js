@@ -1,3 +1,5 @@
+const React = require('react')
+const ReactDOM = require('react-dom')
 // Standard functions for creating SVG/HTML elements
 exports.createGroup = function(options, content) {
   var args = [options];
