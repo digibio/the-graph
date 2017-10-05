@@ -35,7 +35,7 @@ var Tooltip = {
     tooltipper.addEventListener("tap", this.showTooltip);
     tooltipper.addEventListener("mouseenter", this.showTooltip);
     tooltipper.addEventListener("mouseleave", this.hideTooltip);
-  }
+  },
   componendWillUnmount: () => {
     tooltipper.removeEventListener("tap")
     tooltipper.removeEventListener("mouseenter")
