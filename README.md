@@ -10,6 +10,14 @@ You can optionally use [klayjs-noflo](https://github.com/noflo/klayjs-noflo) for
 
 `the-graph` is used as the editor in the [Flowhub IDE](https://flowhub.io).
 
+# Fork information
+
+When I tried to inject this into my own React project as a regular component, this failed - of course no surprise, reading further a bit. So this started as a hack to be able to use it anyway.
+
+So far, so good.
+
+I intend to make it either into a standalone or PR into the original, but it requires a bit of work clearly, to be practically bump up from React 0.x to 15.x, and even more to work with React 16.
+
 ## Examples
 
 * Basic demo. [code](./examples/demo-simple.html) |
