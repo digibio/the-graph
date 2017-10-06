@@ -12,11 +12,31 @@ You can optionally use [klayjs-noflo](https://github.com/noflo/klayjs-noflo) for
 
 # Fork information
 
-When I tried to inject this into my own React project as a regular component, this failed - of course no surprise, reading further a bit. So this started as a hack to be able to use it anyway.
+When I tried to inject this into my own WebPack-driven React project as
+a regular component, this failed - of course no surprise,
+reading further a bit.
+So this started as a hack to be able to use it anyway.
 
-So far, so good.
+So far, so good. Code does not crash, and the component
+can be imported, like so:
 
-I intend to make it either into a standalone or PR into the original, but it requires a bit of work clearly, to be practically bump up from React 0.x to 15.x, and even more to work with React 16.
+```
+import {App, fbpGraph} from 'the-graph'
+
+class GraphComponent extends React.Component {
+  render(){
+    let graph = new fbpGraph()
+    graph.addNode(1, 'hi', {label: 'basic node', x: 50, y: 0})
+
+    return <App
+        graph={graph}
+        library={props.library}
+    />
+}
+```
+something like this. Work in progress...
+
+Working on getting the styles/classNames right now, which seem to get lost.
 
 ## Examples
 
