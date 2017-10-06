@@ -57,6 +57,8 @@
           extract: 'auto',
           strict: false,
           newcap: false,
+          esversion: 6,
+          asi: true,
           "globals": { "Polymer": true }
         },
         all: {
@@ -70,7 +72,7 @@
       connect: {
         server: {
           options: {
-            port: 3000,
+            port: 3033,
             hostname: '*', // Allow connection from mobile
             livereload: true
           }
