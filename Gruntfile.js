@@ -110,7 +110,7 @@
       'saucelabs-mocha': {
         all: {
           options: {
-            urls: ['http://127.0.0.1:3000/spec/runner.html'],
+            urls: ['http://127.0.0.1:3033/spec/runner.html'],
             browsers: [
               {
                 browserName: 'googlechrome',
