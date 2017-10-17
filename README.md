@@ -15,28 +15,14 @@ You can optionally use [klayjs-noflo](https://github.com/noflo/klayjs-noflo) for
 When I tried to inject this into my own WebPack-driven React project as
 a regular component, this failed - of course no surprise,
 reading further a bit.
+
 So this started as a hack to be able to use it anyway.
 
-So far, so good. Code does not crash, and the component
-can be imported, like so:
+So far so good; there is a working implementation of the basic demo as a webpack project in react-webgraph-example.
 
-```
-import {App, fbpGraph} from 'the-graph'
+Tests will most likely not work anymore.
 
-class GraphComponent extends React.Component {
-  render(){
-    let graph = new fbpGraph()
-    graph.addNode(1, 'hi', {label: 'basic node', x: 50, y: 0})
-
-    return <App
-        graph={graph}
-        library={props.library}
-    />
-}
-```
-something like this. Work in progress...
-
-Working on getting the styles/classNames right now, which seem to get lost.
+Working on getting the styles/classNames right now, most of it is workable atm, using modular class injection.
 
 ## Examples
 
