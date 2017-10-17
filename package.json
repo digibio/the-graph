@@ -1,6 +1,6 @@
 {
-  "name": "the-graph",
-  "version": "0.10.4-Webpack-Hack",
+  "name": "react-webgraph",
+  "version": "0.10.5",
   "description": "flow-based programming graph editing",
   "author": "Forrest Oliphant, the Grid",
   "license": "MIT",
@@ -20,6 +20,11 @@
     "tv4": "^1.3.0"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "chai": "^4.0.0",
     "coffee-script": "^1.12.2",
     "coffeeify": "^2.0.1",
@@ -33,7 +38,8 @@
     "grunt-exec": "~2.0.0",
     "grunt-saucelabs": "^9.0.0",
     "mocha": "^3.2.0",
-    "stylus": "~0.54.5"
+    "stylus": "~0.54.5",
+    "webpack": "^3.8.1"
   },
   "scripts": {
     "start": "grunt dev",
@@ -41,10 +47,6 @@
     "build": "grunt build",
     "preversion": "grunt test",
     "postversion": "git push && git push --tags"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/flowhub/the-graph.git"
   },
   "keywords": [
     "graph"

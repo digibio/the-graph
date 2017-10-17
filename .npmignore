@@ -1,3 +1,5 @@
 /build
 /bower_components
+react-webgraph-example/
+examples/
 *.tgz

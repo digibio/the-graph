@@ -56,4 +56,4 @@ TheGraph.clipboard = require("./the-graph-editor/clipboard.js");
 TheGraph.editor = require('./the-graph-editor/menus.js');
 
 
-module.exports = TheGraph;
+export default TheGraph;

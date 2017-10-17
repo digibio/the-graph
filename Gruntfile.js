@@ -136,7 +136,7 @@
     this.loadNpmTasks('grunt-saucelabs');
 
     this.registerTask('dev', ['test', 'watch']);
-    this.registerTask('build', ['exec:build_stylus', 'exec:build_fa', 'browserify:libs']);
+    this.registerTask('build', ['exec:build_stylus', 'exec:build_fa']);
     this.registerTask('test', ['jshint:all', 'build', 'coffee', 'connect:server']);
     this.registerTask('crossbrowser', ['test', 'saucelabs-mocha']);
     this.registerTask('default', ['test']);
