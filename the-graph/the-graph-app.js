@@ -58,15 +58,15 @@ module.exports.register = function (context) {
 
   TheGraph.config.app = {
     container: {
-      className: "the-graph-app",
+      className: "theGraphApp",
       name: "app"
     },
     canvas: {
       ref: "canvas",
-      className: "app-canvas"
+      className: "appCanvas"
     },
     svg: {
-      className: "app-svg",
+      className: "appSvg",
       ref: 'svg',
     },
     svgGroup: {
@@ -466,7 +466,7 @@ module.exports.register = function (context) {
       document.addEventListener('keyup', this.keyUp);
 
       // Canvas background
-      bgCanvas = unwrap(ReactDOM.findDOMNode(this.refs.canvas));
+      let bgCanvas = unwrap(ReactDOM.findDOMNode(this.refs.canvas));
       this.bgContext = unwrap(bgCanvas.getContext('2d'));
       this.componentDidUpdate();
 

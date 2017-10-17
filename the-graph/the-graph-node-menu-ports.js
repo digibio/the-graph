@@ -7,13 +7,13 @@ module.exports.register = function (context) {
   TheGraph.config.nodeMenuPorts = {
     container: {},
     linesGroup: {
-      className: "context-ports-lines"
+      className: "contextPortsLines"
     },
     portsGroup: {
-      className: "context-ports-ports"
+      className: "contextPortsPorts"
     },
     portPath: {
-      className: "context-port-path"
+      className: "contextPortPath"
     },
     nodeMenuPort: {}
   };
@@ -87,7 +87,7 @@ module.exports.register = function (context) {
 
       var containerContents = [linesGroup, portsGroup];
       var containerOptions = {
-        className: "context-ports context-ports-"+(this.props.isIn ? "in" : "out"),
+        className: "contextPorts contextPorts-"+(this.props.isIn ? "In" : "Out"),
         transform: transform
       };
       containerOptions = TheGraph.merge(TheGraph.config.nodeMenuPorts.container, containerOptions);

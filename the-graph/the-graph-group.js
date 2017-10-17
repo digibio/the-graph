@@ -13,10 +13,10 @@ module.exports.register = function (context) {
       ry: TheGraph.config.nodeRadius
     },
     labelText: {
-      className: "group-label"
+      className: "groupLabel"
     },
     descriptionText: {
-      className: "group-description"
+      className: "groupDescription"
     }
   };
 
@@ -144,7 +144,7 @@ module.exports.register = function (context) {
         y: y,
         width: this.props.maxX - x + TheGraph.config.nodeWidth*0.5,
         height: this.props.maxY - y + TheGraph.config.nodeHeight*0.75,
-        className: "group-box color"+color + selection,
+        className: "groupBox color"+color + selection,
       };
       boxRectOptions = TheGraph.merge(TheGraph.config.group.boxRect, boxRectOptions);
       var boxRect =  TheGraph.factories.group.createGroupBoxRect.call(this, boxRectOptions);

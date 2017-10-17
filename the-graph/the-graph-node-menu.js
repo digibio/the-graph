@@ -6,7 +6,7 @@ module.exports.register = function (context) {
 
   TheGraph.config.nodeMenu = {
     container: {
-      className: "context-node"
+      className: "contextNode"
     },
     inports: {},
     outports: {},

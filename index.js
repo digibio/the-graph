@@ -1,3 +1,4 @@
+import lightCss from './themes/light.css'
 // Module object
 var TheGraph = {};
 
@@ -50,5 +51,7 @@ TheGraph.library = require('./the-graph/the-graph-library.js');
 
 TheGraph.clipboard = require("./the-graph-editor/clipboard.js");
 TheGraph.editor = require('./the-graph-editor/menus.js');
+
+TheGraph.lightCss = lightCss.theGraphLight
 
 module.exports = TheGraph;

@@ -6,7 +6,7 @@ var merge = require('./merge.js');
 var config = {
   container: {},
   rect: {
-    className: "tooltip-bg",
+    className: "tooltipBackground",
     x: 0,
     y: -7,
     rx: 3,
@@ -14,7 +14,7 @@ var config = {
     height: 16
   },
   text: {
-    className: "tooltip-label",
+    className: "tooltipLabel",
     ref: "label"
   }
 };
@@ -27,7 +27,7 @@ var factories = {
 };
 
 // Port view
-Tooltip = React.createFactory( React.createClass({
+let Tooltip = React.createFactory( React.createClass({
   displayName: "TheGraphTooltip",
   render: function() {
 

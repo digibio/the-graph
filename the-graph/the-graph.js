@@ -263,7 +263,7 @@ module.exports.register = function (context) {
           className: (this.props.className ? this.props.className : "text-bg"),
         },
         React.DOM.rect({
-          className: "text-bg-rect",
+          className: "textBackgroundRect",
           x: x,
           y: y,
           rx: radius,
@@ -272,7 +272,7 @@ module.exports.register = function (context) {
           width: width
         }),
         React.DOM.text({
-          className: (this.props.textClassName ? this.props.textClassName : "text-bg-text"),
+          className: (this.props.textClassName ? this.props.textClassName : "textBackgroundText"),
           x: this.props.x,
           y: this.props.y,
           children: text

@@ -11,15 +11,15 @@ module.exports.register = function (context) {
     snap: TheGraph.config.nodeSize,
     container: {},
     background: {
-      className: "node-bg"
+      className: "nodeBackground"
     },
     border: {
-      className: "node-border drag",
+      className: "nodeBorder drag",
       rx: TheGraph.config.nodeRadius,
       ry: TheGraph.config.nodeRadius
     },
     innerRect: {
-      className: "node-rect drag",
+      className: "nodeRect drag",
       x: 3,
       y: 3,
       rx: TheGraph.config.nodeRadius - 2,
@@ -27,10 +27,10 @@ module.exports.register = function (context) {
     },
     icon: {
       ref: "icon",
-      className: "icon node-icon drag"
+      className: "icon nodeIcon drag"
     },
     iconsvg: {
-      className: "icon node-icon drag"
+      className: "icon nodeIcon drag"
     },
     inports: {
       className: "inports"
@@ -39,22 +39,22 @@ module.exports.register = function (context) {
       className: "outports"
     },
     labelBackground: {
-      className: "node-label-bg"
+      className: "nodeLabel"
     },
     labelRect: {
-      className: "text-bg-rect"
+      className: "textBackgroundRect"
     },
     labelText: {
-      className: "node-label"
+      className: "nodeLabel"
     },
     sublabelBackground: {
-      className: "node-sublabel-bg"
+      className: "nodeSublabelBackground"
     },
     sublabelRect: {
-      className: "text-bg-rect"
+      className: "textBackgroundRect"
     },
     sublabelText: {
-      className: "node-sublabel"
+      className: "nodeSublabel"
     }
   };
 

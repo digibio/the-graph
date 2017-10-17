@@ -13,17 +13,17 @@ module.exports.register = function (context) {
       className: "port arrow"
     },
     backgroundCircle: {
-      className: "port-circle-bg"
+      className: "portCircleBackground"
     },
     arc: {
-      className: "port-arc"
+      className: "portArc"
     },
     innerCircle: {
       ref: "circleSmall"
     },
     text: {
       ref: "label",
-      className: "port-label drag"
+      className: "portLabel drag"
     }
   };
 
@@ -177,7 +177,7 @@ module.exports.register = function (context) {
       var arc = TheGraph.factories.port.createPortArc.call(this, arcOptions);
 
       var innerCircleOptions = {
-        className: "port-circle-small fill route"+this.props.route,
+        className: "portCircleSmall fill route"+this.props.route,
         r: r - 1.5
       };
 

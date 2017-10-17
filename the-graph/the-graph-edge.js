@@ -12,14 +12,14 @@ module.exports.register = function (context) {
       className: "edge"
     },
     backgroundPath: {
-      className: "edge-bg"
+      className: "edgeBackground"
     },
     foregroundPath: {
       ref: "route",
-      className: "edge-fg stroke route"
+      className: "edgeForeground stroke route"
     },
     touchPath: {
-      className: "edge-touch",
+      className: "edgeTouch",
       ref: "touch"
     }
   };
@@ -265,7 +265,7 @@ module.exports.register = function (context) {
         function (point) {return point.join(',');}).join(' ');
       var arrowBg = TheGraph.factories.edge.createArrow({
         points: pointsArray,
-        className: 'arrow-bg'
+        className: 'arrowBackground'
       });
 
       var arrow = TheGraph.factories.edge.createArrow({

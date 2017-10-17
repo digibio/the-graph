@@ -1,11 +1,11 @@
 
-.the-graph-app {
+.theGraphApp {
   background-color: var-bg;
   position: relative;
 }
 
-.app-canvas,
-.app-svg {
+.appCanvas,
+.appSvg {
   position: absolute;
   top: 0;
   left: 0;
@@ -36,12 +36,12 @@ svg {
 
 /* defaults */
 
-.node-border {
+.nodeBorder {
   fill: var-node-border-bg;
   stroke: var-node-border;
   stroke-width: 2px;
 };
-.node-rect {
+.nodeRect {
   fill: var-node;
   stroke: none;
 }
@@ -63,7 +63,7 @@ svg {
   100% { fill: var-node-error; }
 }
 
-.node.error .node-rect {
+.node.error .nodeRect {
   -webkit-animation: error 1s linear infinite alternate;
      -moz-animation: error 1s linear infinite alternate;
        -o-animation: error 1s linear infinite alternate;
@@ -77,43 +77,43 @@ svg {
 }
 
 .node:hover
-  .node-rect
+  .nodeRect
     fill: var-node-hover
-  .node-border
+  .nodeBorder
     stroke: var-node-hover-border
-  .port-arc
+  .portArc
     fill: var-node-hover-border
 
-.ex-inports .node-border {
+.exInports .nodeBorder {
   fill: var-export-bg;
   stroke: none;
 }
-.ex-outports .node-border {
+.exOutports .nodeBorder {
   fill: var-export-bg;
   stroke: none;
 }
-.ex-inports .node .node-rect,
-.ex-outports .node .node-rect,
-.ex-inports .node:hover .node-rect,
-.ex-outports .node:hover .node-rect {
+.exInports .node .nodeRect,
+.exOutports .node .nodeRect,
+.exInports .node:hover .nodeRect,
+.exOutports .node:hover .nodeRect {
   fill: none;
 }
 
 .selection 
-  .ex-inports .node .node-border
-  .ex-outports .node .node-border 
+  .exInports .node .nodeBorder
+  .exOutports .node .nodeBorder
     fill: var-export-bg
 
 .small 
-  .node-border
+  .nodeBorder
     fill: var-node
     stroke: none
-  .ex-inports .node .node-border
-  .ex-outports .node .node-border 
+  .exInports .node .nodeBorder
+  .exOutports .node .nodeBorder
     fill: var-export-bg
 
 
-.node-bg {
+.nodeBackground {
   opacity: 0;
 }
 
@@ -122,40 +122,40 @@ svg {
 
 .selection
   .node
-    .node-rect
+    .nodeRect
       fill: var-node-deselected
-    .node-border
+    .nodeBorder
       stroke: var-node-deselected-border
-    .port-arc
+    .portArc
       fill: var-node-deselected-border
-    .node-icon
+    .nodeIcon
       fill: var-node-deselected-icon
   .node.selected
-    .node-rect
+    .nodeRect
       fill: var-node-selected
-    .node-border
+    .nodeBorder
       stroke: var-node-selected-border
-    .port-arc
+    .portArc
       fill: var-node-selected-border
-    .node-icon
+    .nodeIcon
       fill: var-node-selected-icon
-  .ex-inports .node .node-icon
+  .exInports .node .nodeIcon
     fill: var-route02-fade
-  .ex-outports .node .node-icon
+  .exOutports .node .nodeIcon
     fill: var-route04-fade
 
 
 .small .selection
   .node
-    .node-rect
+    .nodeRect
       fill: none
-    .node-border
+    .nodeBorder
       fill: var-node-deselected
       stroke: none
   .node.selected
-    .node-rect
+    .nodeRect
       fill: none
-    .node-border
+    .nodeBorder
       fill: var-node-selected
       stroke: none
 
@@ -166,83 +166,83 @@ path {
   fill: none;
 }
 
-.arrow-bg {
+.arrowBackground {
   stroke: var-edge-bg;
   stroke-width: ((var-edge-width+1)/2);
 }
-.edge-bg {
+.edgeBackground {
   stroke: var-edge-bg;
   stroke-width: (var-edge-width + 2);
 }
-.edge-fg {
+.edgeForeground {
   stroke: var-route00;
   stroke-width: var-edge-width;
 
   transition-property: stroke-width;
   transition-duration: 0.5s;
 }
-.edge-touch {
+.edgeTouch {
   stroke-width: (var-edge-width + 4);
   opacity: 0;
 }
-.edge:hover .edge-bg, .edge:hover .arrow-bg {
+.edge:hover .edgeBackground, .edge:hover .arrowBackground {
   stroke: var-edge-hover-bg;
 }
-.edge.selected .arrow-bg {
+.edge.selected .arrowBackground {
   stroke: var-selection-box-border;
   stroke-width: var-edge-width + 1;
 }
-.edge.selected .edge-bg {
+.edge.selected .edgeBackground {
   stroke-width: (var-edge-width * 2 + 2);
   stroke: var-selection-box-border;
 }
-.small .edge-bg {
+.small .edgeBackground {
   stroke-width: (var-edge-width * 2 + 2);
 }
-.small .edge-fg {
+.small .edgeForeground {
   stroke-width: (var-edge-width * 2);
 }
 
 
 /* marching ants for animated arrows */
 
-@-webkit-keyframes arrow-heartbeats {
+@-webkit-keyframes arrowHeartbeats {
   0% { stroke-width: (var-edge-width + 1); }
   10% { stroke-width: ((var-edge-width + 1) * 2); }
   30% { stroke-width: (var-edge-width + 1); }
   40% { stroke-width: ((var-edge-width + 1) * 2); }
   60% { stroke-width: (var-edge-width + 1); }
 }
-@-moz-keyframes arrow-heartbeats {
+@-moz-keyframes arrowHeartbeats {
   0% { stroke-width: (var-edge-width + 1); }
   10% { stroke-width: ((var-edge-width + 1) * 2); }
   30% { stroke-width: (var-edge-width + 1); }
   40% { stroke-width: ((var-edge-width + 1) * 2); }
   60% { stroke-width: (var-edge-width + 1); }
 }
-@-o-keyframes arrow-heartbeats {
+@-o-keyframes arrowHeartbeats {
   0% { stroke-width: (var-edge-width + 1); }
   10% { stroke-width: ((var-edge-width + 1) * 2); }
   30% { stroke-width: (var-edge-width + 1); }
   40% { stroke-width: ((var-edge-width + 1) * 2); }
   60% { stroke-width: (var-edge-width + 1); }
 }
-@keyframes arrow-heartbeats {
+@keyframes arrowHeartbeats {
   0% { stroke-width: (var-edge-width + 1); }
   10% { stroke-width: ((var-edge-width + 1) * 2); }
   30% { stroke-width: (var-edge-width + 1); }
   40% { stroke-width: ((var-edge-width + 1) * 2); }
   60% { stroke-width: (var-edge-width + 1); }
 }
-.edge.animated .arrow-bg {
+.edge.animated .arrowBackground {
   stroke-linecap: round;
   stroke-width: (var-edge-width + 1);
   stroke: var-selection-box-border;
 
-  -webkit-animation: arrow-heartbeats 4s linear infinite;
-     -moz-animation: arrow-heartbeats 4s linear infinite;
-       -o-animation: arrow-heartbeats 4s linear infinite;
-          animation: arrow-heartbeats 4s linear infinite;
+  -webkit-animation: arrowHeartbeats 4s linear infinite;
+     -moz-animation: arrowHeartbeats 4s linear infinite;
+       -o-animation: arrowHeartbeats 4s linear infinite;
+          animation: arrowHeartbeats 4s linear infinite;
 }
 
 
@@ -276,7 +276,7 @@ path {
   40% { stroke-width: (var-edge-width * 4); }
   60% { stroke-width: (var-edge-width * 2); }
 }
-.edge.animated .edge-bg {
+.edge.animated .edgeBackground {
   stroke-linecap: round;
   stroke-width: (var-edge-width * 2);
   stroke: var-selection-box-border;
@@ -297,124 +297,124 @@ text {
   dominant-baseline: central;
 }
 
-.text-bg-rect {
+.textBackgroundRect {
   fill: var-text-bg;
 }
 
-.node-label,
-.node-sublabel {
+.nodeLabel,
+.nodeSublabel {
   text-anchor: middle;
 }
-.small .node-label-bg {
+.small .nodeLabelBackground {
   visibility: hidden;
 }
 
-.node-sublabel {
+.nodeSublabel {
   font-size: 9px;
 }
-.node-sublabel-bg {
+.nodeSublabelBackground {
   visibility: hidden;
 }
-.big .node-sublabel-bg {
+.big .nodeSublabelBackground {
   visibility: visible;
 }
 
 
 /* IIPs */
-.iip-path {
+.iipPath {
   stroke-width: 1px;
   stroke: var-route00;
 }
-.iip-info {
+.iipInfo {
   visibility: hidden;
 }
-.iip-info .text-bg-text {
+.iipInfo .textBackgroundText {
   font-size: 5px;
   text-anchor: end;
 }
-.big .iip-info {
+.big .iipInfo {
   visibility: visible;
 }
 
 
 /* Context menu - node */
-.context-modal-bg {
+.contextModalBackground {
   fill: var-menu-modal-bg;
 }
-.context-node-rect {
+.contextNodeRect {
   fill: var-menu-icon-bg;
   stroke: var-menu-border;
   stroke-width: 0.5px;
 }
-.context-node-icon {
+.contextNodeIcon {
   font-size: 30px;
   fill: var-type-a;
 }
-.context-icon {
+.contextIcon {
   font-size: 20px;
   fill: var-type-a;
 }
-.context-node-label {
+.contextNodeLabel {
   text-anchor: middle;
 }
-.context-arc {
+.contextArc {
   stroke-width: 72px;
   stroke: var-menu-bg;
 }
-.context-slice.click:hover .context-arc {
+.contextSlice.click:hover .contextArc {
   stroke: var-menu-bg-hover;
 }
-.context-circle {
+.contextCircle {
   stroke: var-menu-border;
   fill: none;
   stroke-width: 1.5px;
 }
-.context-circle-x {
+.contextCircleX {
   stroke: var-menu-border;
   fill: none;
   stroke-width: 1px;
 }
 
-.context-arc-icon-label {
+.contextArcIconLabel {
   font-size: 12px;
 }
 
 
 /* Context menu - port */
-.context-port-bg {
+.contextPortBackground {
   fill: var-menu-bg;
 }
-.context-port-bg.highlight {
+.contextPortBackground.highlight {
   stroke: var-menu-border;
   stroke-width: 1px;
 }
-.context-port-hole {
+.contextPortHole {
   stroke-width: 2px;
   fill: var-menu-bg;
   stroke: var-menu-border;
 }
-.context-port-path {
+.contextPortPath {
   stroke: var-menu-border;
 }
-.context-port-label {
+.contextPortLabel {
   fill: var-type-a;
   dominant-baseline: central;
 }
-.context-port-in .context-port-label {
+.contextPortIn .contextPortLabel {
   text-anchor: end;
 }
-.context-port-out .context-port-label {
+.contextPortOut .contextPortLabel {
   text-anchor: start;
 }
 
 
 
 /* Context menu - edge */
-.context-edge-label-out {
+.contextEdgeLabelOut {
   text-anchor: end;
   dominant-baseline: central;
 }
-.context-edge-label-in {
+.contextEdgeLabelIn {
   text-anchor: start;
   dominant-baseline: central;
 }
@@ -429,11 +429,11 @@ text {
 .tooltip.hidden {
   opacity: 0;
 }
-.tooltip-bg {
-  fill: var-tooltip-bg;
+.tooltipBackground {
+  fill: var-tooltipBackground;
   opacity: 0.75;
 }
-.tooltip-label {
+.tooltipLabel {
   text-anchor: start;
   font-size: 10px;
 }
@@ -443,190 +443,190 @@ text {
   text-anchor: middle;
   dominant-baseline: central;
 }
-.node-icon {
+.nodeIcon {
   font-size: 45px;
   fill: var-node-icon;
 
   transition-property: font-size, fill;
   transition-duration: 0.5s,      0.3s;
 }
-.small .node-icon {
+.small .nodeIcon {
   fill: var-node-icon-small;
   font-size: 66px;
 }
-.big .node-icon {
+.big .nodeIcon {
   fill: var-node-icon-big;
 }
 
-.ex-inports .node-icon,
-.small .ex-inports .node-icon {
+.exInports .nodeIcon,
+.small .exInports .nodeIcon {
   fill: var-route02;
 }
-.ex-outports .node-icon,
-.small .ex-outports .node-icon {
+.exOutports .nodeIcon,
+.small .exOutports .nodeIcon {
   fill: var-route04;
 }
 
-.port-circle-bg {
+.portCircleBackground {
   fill: var-node-border;
   opacity: 0;
 }
-.port-arc {
+.portArc {
   fill: var-node-border;
 }
-.port-circle-small {
+.portCircleSmall {
   fill: none;
 }
-.small .port-circle {
+.small .portCircle {
   visibility: hidden;
 }
-.port-label {
+.portLabel {
   fill: var-type-b; 
   visibility: hidden;
   font-size: 6px;
   dominant-baseline: central;
 }
 
-.inports .port-label {
+.inports .portLabel {
   text-anchor: start;  
 }
-.outports .port-label {
+.outports .portLabel {
   text-anchor: end;  
 }
-.big .port-label {
+.big .portLabel {
   visibility: visible;
 }
-.big .ex-inports .port-label,
-.big .ex-outports .port-label {
+.big .exInports .portLabel,
+.big .exOutports .portLabel {
   visibility: hidden;
 }
 
 
 /* Groups */
-.group-box {
+.groupBox {
   fill: var-group00;
 
   transition-property: fill;
   transition-duration: 0.3s;
 }
-.group-box:hover {
+.groupBox:hover {
   fill: var-group00-hover;
 }
-.small .group-box {
+.small .groupBox {
   stroke-width: 8px;
 }
 
-.group-box.color0 
+.groupBox.color0
   fill: var-group00
   stroke: var-group00-stroke
-.group-box.color1 
+.groupBox.color1
   fill: var-group01
   stroke: var-group01-stroke
-.group-box.color2 
+.groupBox.color2
   fill: var-group02
   stroke: var-group02-stroke
-.group-box.color3 
+.groupBox.color3
   fill: var-group03
   stroke: var-group03-stroke
-.group-box.color4 
+.groupBox.color4
   fill: var-group04
   stroke: var-group04-stroke
-.group-box.color5 
+.groupBox.color5
   fill: var-group05
   stroke: var-group05-stroke
-.group-box.color6 
+.groupBox.color6
   fill: var-group06
   stroke: var-group06-stroke
-.group-box.color7 
+.groupBox.color7
   fill: var-group07
   stroke: var-group07-stroke
-.group-box.color8 
+.groupBox.color8
   fill: var-group08
   stroke: var-group08-stroke
-.group-box.color9 
+.groupBox.color9
   fill: var-group09
   stroke: var-group09-stroke
-.group-box.color10
+.groupBox.color10
   fill: var-group10
   stroke: var-group10-stroke
 
-.group-box.color0:hover 
+.groupBox.color0:hover
   fill: var-group00-hover
-.group-box.color1:hover 
+.groupBox.color1:hover
   fill: var-group01-hover
-.group-box.color2:hover 
+.groupBox.color2:hover
   fill: var-group02-hover
-.group-box.color3:hover 
+.groupBox.color3:hover
   fill: var-group03-hover
-.group-box.color4:hover 
+.groupBox.color4:hover
   fill: var-group04-hover
-.group-box.color5:hover 
+.groupBox.color5:hover
   fill: var-group05-hover
-.group-box.color6:hover 
+.groupBox.color6:hover
   fill: var-group06-hover
-.group-box.color7:hover 
+.groupBox.color7:hover
   fill: var-group07-hover
-.group-box.color8:hover 
+.groupBox.color8:hover
   fill: var-group08-hover
-.group-box.color9:hover 
+.groupBox.color9:hover
   fill: var-group09-hover
-.group-box.color10:hover
+.groupBox.color10:hover
   fill: var-group10-hover
 
 /* deselected group */
 .selection
-  .group-box.color0 
+  .groupBox.color0
     fill: var-group00-fade
-  .group-box.color1 
+  .groupBox.color1
     fill: var-group01-fade
-  .group-box.color2 
+  .groupBox.color2
     fill: var-group02-fade
-  .group-box.color3 
+  .groupBox.color3
     fill: var-group03-fade
-  .group-box.color4 
+  .groupBox.color4
     fill: var-group04-fade
-  .group-box.color5 
+  .groupBox.color5
     fill: var-group05-fade
-  .group-box.color6 
+  .groupBox.color6
     fill: var-group06-fade
-  .group-box.color7 
+  .groupBox.color7
     fill: var-group07-fade
-  .group-box.color8 
+  .groupBox.color8
     fill: var-group08-fade
-  .group-box.color9 
+  .groupBox.color9
     fill: var-group09-fade
-  .group-box.color10
+  .groupBox.color10
     fill: var-group10-fade
 
 /* selected pseudo-group */
 .selection
-  .group-box.selection
+  .groupBox.selection
     fill: var-selection-box
     stroke: var-selection-box-border
     stroke-width: 1px
-  .group-box.selection:hover
+  .groupBox.selection:hover
     fill: var-selection-box-hover
 
 
-.group-label {
+.groupLabel {
   text-anchor: start;  
   fill: var-type-a;
   font-size: 20px;
   transition-property: font-size;
   transition-duration: 0.5s;
 }
-.small .group-label {
+.small .groupLabel {
   font-size: 30px;
   transition-property: font-size;
   transition-duration: 0.5s;
 }
 
-.group-description {
+.groupDescription {
   fill: var-type-a;
   font-size: 12px;
   text-anchor: start;  
 }
-.small .group-description {
+.small .groupDescription {
   visibility: hidden;
 }
 

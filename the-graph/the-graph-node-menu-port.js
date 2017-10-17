@@ -58,7 +58,7 @@ module.exports.register = function (context) {
       var highlight = (highlightPort && highlightPort.isIn === this.props.isIn && highlightPort.type === this.props.port.type);
 
       var rectOptions = {
-        className: "context-port-bg"+(highlight ? " highlight" : ""),
+        className: "contextPortBackground"+(highlight ? " highlight" : ""),
         x: this.props.x + (this.props.isIn ? -bgWidth : 0),
         y: this.props.y - TheGraph.contextPortSize/2,
         width: bgWidth
@@ -68,7 +68,7 @@ module.exports.register = function (context) {
       var rect = TheGraph.factories.nodeMenuPort.createNodeMenuBackgroundRect.call(this, rectOptions);
 
       var circleOptions = {
-        className: "context-port-hole stroke route"+this.props.route,
+        className: "contextPortHole stroke route"+this.props.route,
         cx: this.props.x,
         cy: this.props.y,
       };
@@ -76,7 +76,7 @@ module.exports.register = function (context) {
       var circle = TheGraph.factories.nodeMenuPort.createNodeMenuPortCircle.call(this, circleOptions);
 
       var textOptions = {
-        className: "context-port-label fill route"+this.props.route,
+        className: "contextPortLabel fill route"+this.props.route,
         x: this.props.x + (this.props.isIn ? -20 : 20),
         y: this.props.y,
         children: this.props.label.replace(/(.*)\/(.*)(_.*)\.(.*)/, '$2.$4')
@@ -87,7 +87,7 @@ module.exports.register = function (context) {
 
       var containerContents = [rect, circle, text];
 
-      var containerOptions = TheGraph.merge(TheGraph.config.nodeMenuPort.container, { className: "context-port click context-port-"+(this.props.isIn ? "in" : "out") });
+      var containerOptions = TheGraph.merge(TheGraph.config.nodeMenuPort.container, { className: "contextPort click contextPort"+(this.props.isIn ? "In" : "Out") });
       return TheGraph.factories.nodeMenuPort.createNodeMenuPortGroup.call(this, containerOptions, containerContents);
 
     }

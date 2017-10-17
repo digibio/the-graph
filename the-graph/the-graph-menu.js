@@ -27,32 +27,32 @@ module.exports.register = function (context) {
       w4LabelY: 15
     },
     container: {
-      className: "context-menu"
+      className: "contextMenu"
     },
     arcPath: {
-      className: "context-arc context-node-info-bg"
+      className: "contextArc contextNodeInfoBackground"
     },
     sliceIconText: {
-      className: "icon context-icon context-node-info-icon"
+      className: "icon contextIcon contextNodeInfoIcon"
     },
     sliceLabelText: {
-      className: "context-arc-label"
+      className: "contextArcLabel"
     },
     sliceIconLabelText: {
-      className: "context-arc-icon-label"
+      className: "contextArcIconLabel"
     },
     circleXPath: {
-      className: "context-circle-x",
+      className: "contextCircleX",
       d: "M -51 -51 L 51 51 M -51 51 L 51 -51"
     },
     outlineCircle: {
-      className: "context-circle"
+      className: "contextCircle"
     },
     labelText: {
-      className: "context-node-label"
+      className: "contextNodeLabel"
     },
     iconRect: {
-      className: "context-node-rect",
+      className: "contextNodeRect",
       x: -24,
       y: -24,
       width: 48,
@@ -118,7 +118,7 @@ module.exports.register = function (context) {
 
     var containerOptions = {
       ref: direction,
-      className: "context-slice context-node-info" + (this.state[direction+"tappable"] ? " click" : ""),
+      className: "contextSlice contextNodeInfo" + (this.state[direction+"tappable"] ? " click" : ""),
       children: children
     };
     containerOptions = TheGraph.merge(TheGraph.config.menu.container, containerOptions);
@@ -227,7 +227,7 @@ module.exports.register = function (context) {
         var middleIcon = TheGraph.factories.menu.createMenuMiddleIconRect.call(this, middleIconRectOptions);
 
         var middleIconTextOptions = {
-          className: "icon context-node-icon"+iconStyle,
+          className: "icon contextNodeIcon"+iconStyle,
           children: TheGraph.FONT_AWESOME[ (this.props.icon ? this.props.icon : menu.icon) ]
         };
         middleIconTextOptions = TheGraph.merge(TheGraph.config.menu.iconText, middleIconTextOptions);
@@ -251,7 +251,7 @@ module.exports.register = function (context) {
     container: {},
     rect: {
       ref: "rect",
-      className: "context-modal-bg"
+      className: "contextModalBackground"
     }
   };
 

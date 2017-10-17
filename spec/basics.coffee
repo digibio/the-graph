@@ -12,7 +12,7 @@ parseFBP = (fbpString, callback) ->
 
 findSvgRoot = (editor) ->
   container = editor
-  apps = container.getElementsByClassName('app-svg')
+  apps = container.getElementsByClassName('appSvg')
   console.log 'g', apps
   return apps[0]
 

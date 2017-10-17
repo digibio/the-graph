@@ -19,10 +19,10 @@ module.exports.register = function (context) {
       className: "nodes"
     },
     inportsGroup: {
-      className: "ex-inports"
+      className: "exInports"
     },
     outportsGroup: {
-      className: "ex-outports"
+      className: "exOutports"
     },
     node: {},
     iip: {},

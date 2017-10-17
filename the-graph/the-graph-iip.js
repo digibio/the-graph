@@ -9,10 +9,10 @@ module.exports.register = function (context) {
       className: "iip"
     },
     path: {
-      className: "iip-path"
+      className: "iipPath"
     },
     text: {
-      className: "iip-info",
+      className: "iipInfo",
       height: 5,
       halign: "right"
     }
