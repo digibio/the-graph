@@ -1,14 +1,14 @@
-.the-graph-dark .the-graph-app {
+.theGraphDark .the-graph-app {
   background-color: #000;
   position: relative;
 }
-.the-graph-dark .app-canvas,
-.the-graph-dark .app-svg {
+.theGraphDark .app-canvas,
+.theGraphDark .app-svg {
   position: absolute;
   top: 0;
   left: 0;
 }
-.the-graph-dark svg {
+.theGraphDark svg {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -16,24 +16,24 @@
   -ms-user-select: none;
   user-select: none;
 }
-.the-graph-dark .arrow {
+.theGraphDark .arrow {
   cursor: default;
 }
-.the-graph-dark .click {
+.theGraphDark .click {
   cursor: pointer;
 }
-.the-graph-dark .drag {
+.theGraphDark .drag {
   cursor: pointer;
   cursor: -moz-grab;
   cursor: -webkit-grab;
   cursor: grab;
 }
-.the-graph-dark .node-border {
+.theGraphDark .node-border {
   fill: rgba(0,0,0,0.5);
   stroke: #666;
   stroke-width: 2px;
 }
-.the-graph-dark .node-rect {
+.theGraphDark .node-rect {
   fill: rgba(230,238,240,0.94);
   stroke: none;
 }
@@ -61,136 +61,136 @@
     fill: rgba(255,0,0,0.94);
   }
 }
-.the-graph-dark .node.error .node-rect {
+.theGraphDark .node.error .node-rect {
   -webkit-animation: error 1s linear infinite alternate;
   -moz-animation: error 1s linear infinite alternate;
   -o-animation: error 1s linear infinite alternate;
   animation: error 1s linear infinite alternate;
   stroke: none;
 }
-.the-graph-dark .eventcatcher {
+.theGraphDark .eventcatcher {
   fill: #fff;
   fill-opacity: 0.1;
 }
-.the-graph-dark .node:hover .node-rect {
+.theGraphDark .node:hover .node-rect {
   fill: rgba(230,238,240,0.97);
 }
-.the-graph-dark .node:hover .node-border {
+.theGraphDark .node:hover .node-border {
   stroke: #808080;
 }
-.the-graph-dark .node:hover .port-arc {
+.theGraphDark .node:hover .port-arc {
   fill: #808080;
 }
-.the-graph-dark .ex-inports .node-border {
+.theGraphDark .ex-inports .node-border {
   fill: #1a1a1a;
   stroke: none;
 }
-.the-graph-dark .ex-outports .node-border {
+.theGraphDark .ex-outports .node-border {
   fill: #1a1a1a;
   stroke: none;
 }
-.the-graph-dark .ex-inports .node .node-rect,
-.the-graph-dark .ex-outports .node .node-rect,
-.the-graph-dark .ex-inports .node:hover .node-rect,
-.the-graph-dark .ex-outports .node:hover .node-rect {
+.theGraphDark .ex-inports .node .node-rect,
+.theGraphDark .ex-outports .node .node-rect,
+.theGraphDark .ex-inports .node:hover .node-rect,
+.theGraphDark .ex-outports .node:hover .node-rect {
   fill: none;
 }
-.the-graph-dark .selection .ex-inports .node .node-border,
-.the-graph-dark .selection .ex-outports .node .node-border {
+.theGraphDark .selection .ex-inports .node .node-border,
+.theGraphDark .selection .ex-outports .node .node-border {
   fill: #1a1a1a;
 }
-.the-graph-dark .small .node-border {
+.theGraphDark .small .node-border {
   fill: rgba(230,238,240,0.94);
   stroke: none;
 }
-.the-graph-dark .small .ex-inports .node .node-border,
-.the-graph-dark .small .ex-outports .node .node-border {
+.theGraphDark .small .ex-inports .node .node-border,
+.theGraphDark .small .ex-outports .node .node-border {
   fill: #1a1a1a;
 }
-.the-graph-dark .node-bg {
+.theGraphDark .node-bg {
   opacity: 0;
 }
-.the-graph-dark .selection .node .node-rect {
+.theGraphDark .selection .node .node-rect {
   fill: rgba(61,66,67,0.94);
 }
-.the-graph-dark .selection .node .node-border {
+.theGraphDark .selection .node .node-border {
   stroke: #232829;
 }
-.the-graph-dark .selection .node .port-arc {
+.theGraphDark .selection .node .port-arc {
   fill: #232829;
 }
-.the-graph-dark .selection .node .node-icon {
+.theGraphDark .selection .node .node-icon {
   fill: #232829;
 }
-.the-graph-dark .selection .node.selected .node-rect {
+.theGraphDark .selection .node.selected .node-rect {
   fill: rgba(230,238,240,0.94);
 }
-.the-graph-dark .selection .node.selected .node-border {
+.theGraphDark .selection .node.selected .node-border {
   stroke: #808080;
 }
-.the-graph-dark .selection .node.selected .port-arc {
+.theGraphDark .selection .node.selected .port-arc {
   fill: #808080;
 }
-.the-graph-dark .selection .node.selected .node-icon {
+.theGraphDark .selection .node.selected .node-icon {
   fill: #5e6a6e;
 }
-.the-graph-dark .selection .ex-inports .node .node-icon {
+.theGraphDark .selection .ex-inports .node .node-icon {
   fill: #512f01;
 }
-.the-graph-dark .selection .ex-outports .node .node-icon {
+.theGraphDark .selection .ex-outports .node .node-icon {
   fill: #015115;
 }
-.the-graph-dark .small .selection .node .node-rect {
+.theGraphDark .small .selection .node .node-rect {
   fill: none;
 }
-.the-graph-dark .small .selection .node .node-border {
+.theGraphDark .small .selection .node .node-border {
   fill: rgba(61,66,67,0.94);
   stroke: none;
 }
-.the-graph-dark .small .selection .node.selected .node-rect {
+.theGraphDark .small .selection .node.selected .node-rect {
   fill: none;
 }
-.the-graph-dark .small .selection .node.selected .node-border {
+.theGraphDark .small .selection .node.selected .node-border {
   fill: rgba(230,238,240,0.94);
   stroke: none;
 }
-.the-graph-dark path {
+.theGraphDark path {
   fill: none;
 }
-.the-graph-dark .arrow-bg {
+.theGraphDark .arrow-bg {
   stroke: #000;
   stroke-width: 2px;
 }
-.the-graph-dark .edge-bg {
+.theGraphDark .edge-bg {
   stroke: #000;
   stroke-width: 5px;
 }
-.the-graph-dark .edge-fg {
+.theGraphDark .edge-fg {
   stroke: #fff;
   stroke-width: 3px;
   transition-property: stroke-width;
   transition-duration: 0.5s;
 }
-.the-graph-dark .edge-touch {
+.theGraphDark .edge-touch {
   stroke-width: 7px;
   opacity: 0;
 }
-.the-graph-dark .edge:hover .edge-bg,
-.the-graph-dark .edge:hover .arrow-bg {
+.theGraphDark .edge:hover .edge-bg,
+.theGraphDark .edge:hover .arrow-bg {
   stroke: #808080;
 }
-.the-graph-dark .edge.selected .arrow-bg {
+.theGraphDark .edge.selected .arrow-bg {
   stroke: #e6e6e6;
   stroke-width: 4px;
 }
-.the-graph-dark .edge.selected .edge-bg {
+.theGraphDark .edge.selected .edge-bg {
   stroke-width: 8px;
   stroke: #e6e6e6;
 }
-.the-graph-dark .small .edge-bg {
+.theGraphDark .small .edge-bg {
   stroke-width: 8px;
 }
-.the-graph-dark .small .edge-fg {
+.theGraphDark .small .edge-fg {
   stroke-width: 6px;
 }
 @-webkit-keyframes arrow-heartbeats {
@@ -244,7 +244,7 @@
     stroke-width: 4px;
   }
 }
-.the-graph-dark .edge.animated .arrow-bg {
+.theGraphDark .edge.animated .arrow-bg {
   stroke-linecap: round;
   stroke-width: 4px;
   stroke: #e6e6e6;
@@ -304,7 +304,7 @@
     stroke-width: 6px;
   }
 }
-.the-graph-dark .edge.animated .edge-bg {
+.theGraphDark .edge.animated .edge-bg {
   stroke-linecap: round;
   stroke-width: 6px;
   stroke: #e6e6e6;
@@ -313,7 +313,7 @@
   -o-animation: heartbeats 4s linear infinite;
   animation: heartbeats 4s linear infinite;
 }
-.the-graph-dark text {
+.theGraphDark text {
   font-family: "SourceCodePro", "Source Code Pro", Helvetica, Arial, sans-serif;
   text-rendering: geometricPrecision; /* makes text scale smoothly */
   font-size: 14px;
@@ -321,492 +321,492 @@
   text-anchor: middle;
   dominant-baseline: central;
 }
-.the-graph-dark .text-bg-rect {
+.theGraphDark .text-bg-rect {
   fill: rgba(0,0,0,0.5);
 }
-.the-graph-dark .node-label,
-.the-graph-dark .node-sublabel {
+.theGraphDark .node-label,
+.theGraphDark .node-sublabel {
   text-anchor: middle;
 }
-.the-graph-dark .small .node-label-bg {
+.theGraphDark .small .node-label-bg {
   visibility: hidden;
 }
-.the-graph-dark .node-sublabel {
+.theGraphDark .node-sublabel {
   font-size: 9px;
 }
-.the-graph-dark .node-sublabel-bg {
+.theGraphDark .node-sublabel-bg {
   visibility: hidden;
 }
-.the-graph-dark .big .node-sublabel-bg {
+.theGraphDark .big .node-sublabel-bg {
   visibility: visible;
 }
-.the-graph-dark .iip-path {
+.theGraphDark .iip-path {
   stroke-width: 1px;
   stroke: #fff;
 }
-.the-graph-dark .iip-info {
+.theGraphDark .iip-info {
   visibility: hidden;
 }
-.the-graph-dark .iip-info .text-bg-text {
+.theGraphDark .iip-info .text-bg-text {
   font-size: 5px;
   text-anchor: end;
 }
-.the-graph-dark .big .iip-info {
+.theGraphDark .big .iip-info {
   visibility: visible;
 }
-.the-graph-dark .context-modal-bg {
+.theGraphDark .context-modal-bg {
   fill: rgba(0,0,0,0.5);
 }
-.the-graph-dark .context-node-rect {
+.theGraphDark .context-node-rect {
   fill: #121417;
   stroke: #bfbfbf;
   stroke-width: 0.5px;
 }
-.the-graph-dark .context-node-icon {
+.theGraphDark .context-node-icon {
   font-size: 30px;
   fill: #fff;
 }
-.the-graph-dark .context-icon {
+.theGraphDark .context-icon {
   font-size: 20px;
   fill: #fff;
 }
-.the-graph-dark .context-node-label {
+.theGraphDark .context-node-label {
   text-anchor: middle;
 }
-.the-graph-dark .context-arc {
+.theGraphDark .context-arc {
   stroke-width: 72px;
   stroke: rgba(43,48,54,0.95);
 }
-.the-graph-dark .context-slice.click:hover .context-arc {
+.theGraphDark .context-slice.click:hover .context-arc {
   stroke: rgba(90,102,114,0.95);
 }
-.the-graph-dark .context-circle {
+.theGraphDark .context-circle {
   stroke: #bfbfbf;
   fill: none;
   stroke-width: 1.5px;
 }
-.the-graph-dark .context-circle-x {
+.theGraphDark .context-circle-x {
   stroke: #bfbfbf;
   fill: none;
   stroke-width: 1px;
 }
-.the-graph-dark .context-arc-icon-label {
+.theGraphDark .context-arc-icon-label {
   font-size: 12px;
 }
-.the-graph-dark .context-port-bg {
+.theGraphDark .context-port-bg {
   fill: rgba(43,48,54,0.95);
 }
-.the-graph-dark .context-port-bg.highlight {
+.theGraphDark .context-port-bg.highlight {
   stroke: #bfbfbf;
   stroke-width: 1px;
 }
-.the-graph-dark .context-port-hole {
+.theGraphDark .context-port-hole {
   stroke-width: 2px;
   fill: rgba(43,48,54,0.95);
   stroke: #bfbfbf;
 }
-.the-graph-dark .context-port-path {
+.theGraphDark .context-port-path {
   stroke: #bfbfbf;
 }
-.the-graph-dark .context-port-label {
+.theGraphDark .context-port-label {
   fill: #fff;
   dominant-baseline: central;
 }
-.the-graph-dark .context-port-in .context-port-label {
+.theGraphDark .context-port-in .context-port-label {
   text-anchor: end;
 }
-.the-graph-dark .context-port-out .context-port-label {
+.theGraphDark .context-port-out .context-port-label {
   text-anchor: start;
 }
-.the-graph-dark .context-edge-label-out {
+.theGraphDark .context-edge-label-out {
   text-anchor: end;
   dominant-baseline: central;
 }
-.the-graph-dark .context-edge-label-in {
+.theGraphDark .context-edge-label-in {
   text-anchor: start;
   dominant-baseline: central;
 }
-.the-graph-dark .tooltip {
+.theGraphDark .tooltip {
   opacity: 1;
   transition-property: opacity;
   transition-duration: 0.3s;
 }
-.the-graph-dark .tooltip.hidden {
+.theGraphDark .tooltip.hidden {
   opacity: 0;
 }
-.the-graph-dark .tooltip-bg {
+.theGraphDark .tooltip-bg {
   fill: rgba(0,0,0,0.9);
   opacity: 0.75;
 }
-.the-graph-dark .tooltip-label {
+.theGraphDark .tooltip-label {
   text-anchor: start;
   font-size: 10px;
 }
-.the-graph-dark .icon {
+.theGraphDark .icon {
   font-family: 'FontAwesomeSVG';
   text-anchor: middle;
   dominant-baseline: central;
 }
-.the-graph-dark .node-icon {
+.theGraphDark .node-icon {
   font-size: 45px;
   fill: #5e6a6e;
   transition-property: font-size, fill;
   transition-duration: 0.5s, 0.3s;
 }
-.the-graph-dark .small .node-icon {
+.theGraphDark .small .node-icon {
   fill: #2f3537;
   font-size: 66px;
 }
-.the-graph-dark .big .node-icon {
+.theGraphDark .big .node-icon {
   fill: #c8ced0;
 }
-.the-graph-dark .ex-inports .node-icon,
-.the-graph-dark .small .ex-inports .node-icon {
+.theGraphDark .ex-inports .node-icon,
+.theGraphDark .small .ex-inports .node-icon {
   fill: #e88802;
 }
-.the-graph-dark .ex-outports .node-icon,
-.the-graph-dark .small .ex-outports .node-icon {
+.theGraphDark .ex-outports .node-icon,
+.theGraphDark .small .ex-outports .node-icon {
   fill: #02e83c;
 }
-.the-graph-dark .port-circle-bg {
+.theGraphDark .port-circle-bg {
   fill: #666;
   opacity: 0;
 }
-.the-graph-dark .port-arc {
+.theGraphDark .port-arc {
   fill: #666;
 }
-.the-graph-dark .port-circle-small {
+.theGraphDark .port-circle-small {
   fill: none;
 }
-.the-graph-dark .small .port-circle {
+.theGraphDark .small .port-circle {
   visibility: hidden;
 }
-.the-graph-dark .port-label {
+.theGraphDark .port-label {
   fill: #0c0d0e;
   visibility: hidden;
   font-size: 6px;
   dominant-baseline: central;
 }
-.the-graph-dark .inports .port-label {
+.theGraphDark .inports .port-label {
   text-anchor: start;
 }
-.the-graph-dark .outports .port-label {
+.theGraphDark .outports .port-label {
   text-anchor: end;
 }
-.the-graph-dark .big .port-label {
+.theGraphDark .big .port-label {
   visibility: visible;
 }
-.the-graph-dark .big .ex-inports .port-label,
-.the-graph-dark .big .ex-outports .port-label {
+.theGraphDark .big .ex-inports .port-label,
+.theGraphDark .big .ex-outports .port-label {
   visibility: hidden;
 }
-.the-graph-dark .group-box {
+.theGraphDark .group-box {
   fill: rgba(191,191,191,0.15);
   transition-property: fill;
   transition-duration: 0.3s;
 }
-.the-graph-dark .group-box:hover {
+.theGraphDark .group-box:hover {
   fill: rgba(191,191,191,0.25);
 }
-.the-graph-dark .small .group-box {
+.theGraphDark .small .group-box {
   stroke-width: 8px;
 }
-.the-graph-dark .group-box.color0 {
+.theGraphDark .group-box.color0 {
   fill: rgba(191,191,191,0.15);
   stroke: none;
 }
-.the-graph-dark .group-box.color1 {
+.theGraphDark .group-box.color1 {
   fill: rgba(255,128,128,0.15);
   stroke: none;
 }
-.the-graph-dark .group-box.color2 {
+.theGraphDark .group-box.color2 {
   fill: rgba(255,202,128,0.15);
   stroke: none;
 }
-.the-graph-dark .group-box.color3 {
+.theGraphDark .group-box.color3 {
   fill: rgba(255,255,128,0.15);
   stroke: none;
 }
-.the-graph-dark .group-box.color4 {
+.theGraphDark .group-box.color4 {
   fill: rgba(128,255,159,0.15);
   stroke: none;
 }
-.the-graph-dark .group-box.color5 {
+.theGraphDark .group-box.color5 {
   fill: rgba(128,255,212,0.15);
   stroke: none;
 }
-.the-graph-dark .group-box.color6 {
+.theGraphDark .group-box.color6 {
   fill: rgba(128,244,255,0.15);
   stroke: none;
 }
-.the-graph-dark .group-box.color7 {
+.theGraphDark .group-box.color7 {
   fill: rgba(128,191,255,0.15);
   stroke: none;
 }
-.the-graph-dark .group-box.color8 {
+.theGraphDark .group-box.color8 {
   fill: rgba(223,128,255,0.15);
   stroke: none;
 }
-.the-graph-dark .group-box.color9 {
+.theGraphDark .group-box.color9 {
   fill: rgba(255,128,234,0.15);
   stroke: none;
 }
-.the-graph-dark .group-box.color10 {
+.theGraphDark .group-box.color10 {
   fill: rgba(255,128,181,0.15);
   stroke: none;
 }
-.the-graph-dark .group-box.color0:hover {
+.theGraphDark .group-box.color0:hover {
   fill: rgba(191,191,191,0.25);
 }
-.the-graph-dark .group-box.color1:hover {
+.theGraphDark .group-box.color1:hover {
   fill: rgba(255,128,128,0.25);
 }
-.the-graph-dark .group-box.color2:hover {
+.theGraphDark .group-box.color2:hover {
   fill: rgba(255,202,128,0.25);
 }
-.the-graph-dark .group-box.color3:hover {
+.theGraphDark .group-box.color3:hover {
   fill: rgba(255,255,128,0.25);
 }
-.the-graph-dark .group-box.color4:hover {
+.theGraphDark .group-box.color4:hover {
   fill: rgba(128,255,159,0.25);
 }
-.the-graph-dark .group-box.color5:hover {
+.theGraphDark .group-box.color5:hover {
   fill: rgba(128,255,212,0.25);
 }
-.the-graph-dark .group-box.color6:hover {
+.theGraphDark .group-box.color6:hover {
   fill: rgba(128,244,255,0.25);
 }
-.the-graph-dark .group-box.color7:hover {
+.theGraphDark .group-box.color7:hover {
   fill: rgba(128,191,255,0.25);
 }
-.the-graph-dark .group-box.color8:hover {
+.theGraphDark .group-box.color8:hover {
   fill: rgba(223,128,255,0.25);
 }
-.the-graph-dark .group-box.color9:hover {
+.theGraphDark .group-box.color9:hover {
   fill: rgba(255,128,234,0.25);
 }
-.the-graph-dark .group-box.color10:hover {
+.theGraphDark .group-box.color10:hover {
   fill: rgba(255,128,181,0.25);
 }
-.the-graph-dark .selection .group-box.color0 {
+.theGraphDark .selection .group-box.color0 {
   fill: rgba(191,191,191,0.1);
 }
-.the-graph-dark .selection .group-box.color1 {
+.theGraphDark .selection .group-box.color1 {
   fill: rgba(255,128,128,0.1);
 }
-.the-graph-dark .selection .group-box.color2 {
+.theGraphDark .selection .group-box.color2 {
   fill: rgba(255,202,128,0.1);
 }
-.the-graph-dark .selection .group-box.color3 {
+.theGraphDark .selection .group-box.color3 {
   fill: rgba(255,255,128,0.1);
 }
-.the-graph-dark .selection .group-box.color4 {
+.theGraphDark .selection .group-box.color4 {
   fill: rgba(128,255,159,0.1);
 }
-.the-graph-dark .selection .group-box.color5 {
+.theGraphDark .selection .group-box.color5 {
   fill: rgba(128,255,212,0.1);
 }
-.the-graph-dark .selection .group-box.color6 {
+.theGraphDark .selection .group-box.color6 {
   fill: rgba(128,244,255,0.1);
 }
-.the-graph-dark .selection .group-box.color7 {
+.theGraphDark .selection .group-box.color7 {
   fill: rgba(128,191,255,0.1);
 }
-.the-graph-dark .selection .group-box.color8 {
+.theGraphDark .selection .group-box.color8 {
   fill: rgba(223,128,255,0.1);
 }
-.the-graph-dark .selection .group-box.color9 {
+.theGraphDark .selection .group-box.color9 {
   fill: rgba(255,128,234,0.1);
 }
-.the-graph-dark .selection .group-box.color10 {
+.theGraphDark .selection .group-box.color10 {
   fill: rgba(255,128,181,0.1);
 }
-.the-graph-dark .selection .group-box.selection {
+.theGraphDark .selection .group-box.selection {
   fill: rgba(255,255,255,0.15);
   stroke: #e6e6e6;
   stroke-width: 1px;
 }
-.the-graph-dark .selection .group-box.selection:hover {
+.theGraphDark .selection .group-box.selection:hover {
   fill: rgba(255,255,255,0.25);
 }
-.the-graph-dark .group-label {
+.theGraphDark .group-label {
   text-anchor: start;
   fill: #fff;
   font-size: 20px;
   transition-property: font-size;
   transition-duration: 0.5s;
 }
-.the-graph-dark .small .group-label {
+.theGraphDark .small .group-label {
   font-size: 30px;
   transition-property: font-size;
   transition-duration: 0.5s;
 }
-.the-graph-dark .group-description {
+.theGraphDark .group-description {
   fill: #fff;
   font-size: 12px;
   text-anchor: start;
 }
-.the-graph-dark .small .group-description {
+.theGraphDark .small .group-description {
   visibility: hidden;
 }
-.the-graph-dark .stroke,
-.the-graph-dark .stroke.route0,
-.the-graph-dark .selection .selected .stroke,
-.the-graph-dark .selection .selected .stroke.route0 {
+.theGraphDark .stroke,
+.theGraphDark .stroke.route0,
+.theGraphDark .selection .selected .stroke,
+.theGraphDark .selection .selected .stroke.route0 {
   stroke: #fff;
 }
-.the-graph-dark .stroke.route1,
-.the-graph-dark .selection .selected .stroke.route1 {
+.theGraphDark .stroke.route1,
+.theGraphDark .selection .selected .stroke.route1 {
   stroke: #e80202;
 }
-.the-graph-dark .stroke.route2,
-.the-graph-dark .selection .selected .stroke.route2 {
+.theGraphDark .stroke.route2,
+.theGraphDark .selection .selected .stroke.route2 {
   stroke: #e88802;
 }
-.the-graph-dark .stroke.route3,
-.the-graph-dark .selection .selected .stroke.route3 {
+.theGraphDark .stroke.route3,
+.theGraphDark .selection .selected .stroke.route3 {
   stroke: #e8e802;
 }
-.the-graph-dark .stroke.route4,
-.the-graph-dark .selection .selected .stroke.route4 {
+.theGraphDark .stroke.route4,
+.theGraphDark .selection .selected .stroke.route4 {
   stroke: #02e83c;
 }
-.the-graph-dark .stroke.route5,
-.the-graph-dark .selection .selected .stroke.route5 {
+.theGraphDark .stroke.route5,
+.theGraphDark .selection .selected .stroke.route5 {
   stroke: #02e89c;
 }
-.the-graph-dark .stroke.route6,
-.the-graph-dark .selection .selected .stroke.route6 {
+.theGraphDark .stroke.route6,
+.theGraphDark .selection .selected .stroke.route6 {
   stroke: #02d5e8;
 }
-.the-graph-dark .stroke.route7,
-.the-graph-dark .selection .selected .stroke.route7 {
+.theGraphDark .stroke.route7,
+.theGraphDark .selection .selected .stroke.route7 {
   stroke: #0275e8;
 }
-.the-graph-dark .stroke.route8,
-.the-graph-dark .selection .selected .stroke.route8 {
+.theGraphDark .stroke.route8,
+.theGraphDark .selection .selected .stroke.route8 {
   stroke: #af02e8;
 }
-.the-graph-dark .stroke.route9,
-.the-graph-dark .selection .selected .stroke.route9 {
+.theGraphDark .stroke.route9,
+.theGraphDark .selection .selected .stroke.route9 {
   stroke: #e802c2;
 }
-.the-graph-dark .stroke.route10,
-.the-graph-dark .selection .selected .stroke.route10 {
+.theGraphDark .stroke.route10,
+.theGraphDark .selection .selected .stroke.route10 {
   stroke: #e80262;
 }
-.the-graph-dark .selection .stroke,
-.the-graph-dark .selection .stroke.route0 {
+.theGraphDark .selection .stroke,
+.theGraphDark .selection .stroke.route0 {
   stroke: #757575;
 }
-.the-graph-dark .selection .stroke.route1 {
+.theGraphDark .selection .stroke.route1 {
   stroke: #510101;
 }
-.the-graph-dark .selection .stroke.route2 {
+.theGraphDark .selection .stroke.route2 {
   stroke: #512f01;
 }
-.the-graph-dark .selection .stroke.route3 {
+.theGraphDark .selection .stroke.route3 {
   stroke: #515101;
 }
-.the-graph-dark .selection .stroke.route4 {
+.theGraphDark .selection .stroke.route4 {
   stroke: #015115;
 }
-.the-graph-dark .selection .stroke.route5 {
+.theGraphDark .selection .stroke.route5 {
   stroke: #015136;
 }
-.the-graph-dark .selection .stroke.route6 {
+.theGraphDark .selection .stroke.route6 {
   stroke: #014a51;
 }
-.the-graph-dark .selection .stroke.route7 {
+.theGraphDark .selection .stroke.route7 {
   stroke: #012951;
 }
-.the-graph-dark .selection .stroke.route8 {
+.theGraphDark .selection .stroke.route8 {
   stroke: #3d0151;
 }
-.the-graph-dark .selection .stroke.route9 {
+.theGraphDark .selection .stroke.route9 {
   stroke: #510143;
 }
-.the-graph-dark .selection .stroke.route10 {
+.theGraphDark .selection .stroke.route10 {
   stroke: #510122;
 }
-.the-graph-dark .fill,
-.the-graph-dark .fill.route0,
-.the-graph-dark .selection .selected .fill,
-.the-graph-dark .selection .selected .fill.route0 {
+.theGraphDark .fill,
+.theGraphDark .fill.route0,
+.theGraphDark .selection .selected .fill,
+.theGraphDark .selection .selected .fill.route0 {
   fill: #fff;
 }
-.the-graph-dark .fill.route1,
-.the-graph-dark .selection .selected .fill.route1 {
+.theGraphDark .fill.route1,
+.theGraphDark .selection .selected .fill.route1 {
   fill: #e80202;
 }
-.the-graph-dark .fill.route2,
-.the-graph-dark .selection .selected .fill.route2 {
+.theGraphDark .fill.route2,
+.theGraphDark .selection .selected .fill.route2 {
   fill: #e88802;
 }
-.the-graph-dark .fill.route3,
-.the-graph-dark .selection .selected .fill.route3 {
+.theGraphDark .fill.route3,
+.theGraphDark .selection .selected .fill.route3 {
   fill: #e8e802;
 }
-.the-graph-dark .fill.route4,
-.the-graph-dark .selection .selected .fill.route4 {
+.theGraphDark .fill.route4,
+.theGraphDark .selection .selected .fill.route4 {
   fill: #02e83c;
 }
-.the-graph-dark .fill.route5,
-.the-graph-dark .selection .selected .fill.route5 {
+.theGraphDark .fill.route5,
+.theGraphDark .selection .selected .fill.route5 {
   fill: #02e89c;
 }
-.the-graph-dark .fill.route6,
-.the-graph-dark .selection .selected .fill.route6 {
+.theGraphDark .fill.route6,
+.theGraphDark .selection .selected .fill.route6 {
   fill: #02d5e8;
 }
-.the-graph-dark .fill.route7,
-.the-graph-dark .selection .selected .fill.route7 {
+.theGraphDark .fill.route7,
+.theGraphDark .selection .selected .fill.route7 {
   fill: #0275e8;
 }
-.the-graph-dark .fill.route8,
-.the-graph-dark .selection .selected .fill.route8 {
+.theGraphDark .fill.route8,
+.theGraphDark .selection .selected .fill.route8 {
   fill: #af02e8;
 }
-.the-graph-dark .fill.route9,
-.the-graph-dark .selection .selected .fill.route9 {
+.theGraphDark .fill.route9,
+.theGraphDark .selection .selected .fill.route9 {
   fill: #e802c2;
 }
-.the-graph-dark .fill.route10,
-.the-graph-dark .selection .selected .fill.route10 {
+.theGraphDark .fill.route10,
+.theGraphDark .selection .selected .fill.route10 {
   fill: #e80262;
 }
-.the-graph-dark .selection .fill,
-.the-graph-dark .selection .fill.route0 {
+.theGraphDark .selection .fill,
+.theGraphDark .selection .fill.route0 {
   fill: #757575;
 }
-.the-graph-dark .selection .fill.route1 {
+.theGraphDark .selection .fill.route1 {
   fill: #510101;
 }
-.the-graph-dark .selection .fill.route2 {
+.theGraphDark .selection .fill.route2 {
   fill: #512f01;
 }
-.the-graph-dark .selection .fill.route3 {
+.theGraphDark .selection .fill.route3 {
   fill: #515101;
 }
-.the-graph-dark .selection .fill.route4 {
+.theGraphDark .selection .fill.route4 {
   fill: #015115;
 }
-.the-graph-dark .selection .fill.route5 {
+.theGraphDark .selection .fill.route5 {
   fill: #015136;
 }
-.the-graph-dark .selection .fill.route6 {
+.theGraphDark .selection .fill.route6 {
   fill: #014a51;
 }
-.the-graph-dark .selection .fill.route7 {
+.theGraphDark .selection .fill.route7 {
   fill: #012951;
 }
-.the-graph-dark .selection .fill.route8 {
+.theGraphDark .selection .fill.route8 {
   fill: #3d0151;
 }
-.the-graph-dark .selection .fill.route9 {
+.theGraphDark .selection .fill.route9 {
   fill: #510143;
 }
-.the-graph-dark .selection .fill.route10 {
+.theGraphDark .selection .fill.route10 {
   fill: #510122;
 }
 @-moz-keyframes error {
