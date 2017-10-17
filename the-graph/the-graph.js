@@ -1,10 +1,12 @@
 const React = require('react')
+const classNames = require('classnames')
 module.exports.register = function (context) {
 
   var defaultNodeSize = 72;
   var defaultNodeRadius = 8;
 
   var TheGraph = context.TheGraph;
+  let css = context.TheGraph.css
 
   var moduleVars = {
     // nodeSize and nodeRadius are deprecated, use TheGraph.config.(nodeSize/nodeRadius)
@@ -260,10 +262,10 @@ module.exports.register = function (context) {
 
       return React.DOM.g(
         {
-          className: (this.props.className ? this.props.className : "text-bg"),
+          className: (this.props.className ? this.props.className : css.textBackground),
         },
         React.DOM.rect({
-          className: "textBackgroundRect",
+          className: css.textBackgroundRect,
           x: x,
           y: y,
           rx: radius,
@@ -272,7 +274,7 @@ module.exports.register = function (context) {
           width: width
         }),
         React.DOM.text({
-          className: (this.props.textClassName ? this.props.textClassName : "textBackgroundText"),
+          className: (this.props.textClassName ? this.props.textClassName : css.textBackgroundText),
           x: this.props.x,
           y: this.props.y,
           children: text

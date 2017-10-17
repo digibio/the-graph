@@ -1,12 +1,16 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
-var defaultFactories = require('./factories.js');
-var merge = require('./merge.js');
+const classNames = require('classnames')
+const defaultFactories = require('./factories.js');
+const merge = require('./merge.js');
+
+// not modular;
+const css = require('../themes/the-graph-light.css')
 
 var config = {
   container: {},
   rect: {
-    className: "tooltipBackground",
+    className: css.tooltipBackground,
     x: 0,
     y: -7,
     rx: 3,
@@ -14,7 +18,7 @@ var config = {
     height: 16
   },
   text: {
-    className: "tooltipLabel",
+    className: css.tooltipLabel,
     ref: "label"
   }
 };
@@ -40,7 +44,7 @@ let Tooltip = React.createFactory( React.createClass({
     var containerContents = [rect, text];
 
     var containerOptions = {
-      className: "tooltip" + (this.props.visible ? "" : " hidden"),
+      className: classNames(css.tooltip, (this.props.visible ? "" : css.hidden)),
       transform: "translate("+this.props.x+","+this.props.y+")",
     };
     containerOptions = merge(config.container, containerOptions);

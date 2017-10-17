@@ -1,3 +1,4 @@
+let classNames = require('classnames')
 const React = require('react')
 const ReactDOM = require('react-dom')
 var TooltipMixin = require('./mixins').Tooltip;
@@ -6,24 +7,25 @@ var arcs = require('./arcs.js');
 module.exports.register = function (context) {
 
   var TheGraph = context.TheGraph;
+  let css = context.TheGraph.css
 
   // Initialize configuration for the Port view.
   TheGraph.config.port = {
     container: {
-      className: "port arrow"
+      className: classNames(css.port, css.arrow)
     },
     backgroundCircle: {
-      className: "portCircleBackground"
+      className: css.portCircleBackground
     },
     arc: {
-      className: "portArc"
+      className: css.portArc
     },
     innerCircle: {
       ref: "circleSmall"
     },
     text: {
       ref: "label",
-      className: "portLabel drag"
+      className: classNames(css.portLabel,css.drag)
     }
   };
 
@@ -177,7 +179,7 @@ module.exports.register = function (context) {
       var arc = TheGraph.factories.port.createPortArc.call(this, arcOptions);
 
       var innerCircleOptions = {
-        className: "portCircleSmall fill route"+this.props.route,
+        className: classNames(css.portCircleSmall, css.fill, css["route"+this.props.route]),
         r: r - 1.5
       };
 

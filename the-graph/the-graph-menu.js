@@ -1,10 +1,12 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
+const classNames = require('classnames')
 var arcs = require('./arcs');
 
 module.exports.register = function (context) {
 
   var TheGraph = context.TheGraph;
+  let css = context.TheGraph.css
 
   TheGraph.config.menu = {
     radius: 72,
@@ -27,32 +29,32 @@ module.exports.register = function (context) {
       w4LabelY: 15
     },
     container: {
-      className: "contextMenu"
+      className: css.contextMenu
     },
     arcPath: {
-      className: "contextArc contextNodeInfoBackground"
+      className: classNames(css.contextArc, css.contextNodeInfoBackground)
     },
     sliceIconText: {
-      className: "icon contextIcon contextNodeInfoIcon"
+      className: classNames(css.icon, css.contextIcon, css.contextNodeInfoIcon)
     },
     sliceLabelText: {
-      className: "contextArcLabel"
+      className: css.contextArcLabel
     },
     sliceIconLabelText: {
-      className: "contextArcIconLabel"
+      className: css.contextArcIconLabel
     },
     circleXPath: {
-      className: "contextCircleX",
+      className: css.contextCircleX,
       d: "M -51 -51 L 51 51 M -51 51 L 51 -51"
     },
     outlineCircle: {
-      className: "contextCircle"
+      className: css.contextCircle
     },
     labelText: {
-      className: "contextNodeLabel"
+      className: css.contextNodeLabel
     },
     iconRect: {
-      className: "contextNodeRect",
+      className: css.contextNodeRect,
       x: -24,
       y: -24,
       width: 48,
@@ -118,7 +120,7 @@ module.exports.register = function (context) {
 
     var containerOptions = {
       ref: direction,
-      className: "contextSlice contextNodeInfo" + (this.state[direction+"tappable"] ? " click" : ""),
+      className: classNames(css.contextSlice, css.contextNodeInfo, this.state[direction+"tappable"] && css.click ),
       children: children
     };
     containerOptions = TheGraph.merge(TheGraph.config.menu.container, containerOptions);
@@ -218,16 +220,17 @@ module.exports.register = function (context) {
       // Middle icon
       if (this.props.icon || menu.icon) {
         var iconColor = (this.props.iconColor!==undefined ? this.props.iconColor : menu.iconColor);
-        var iconStyle = "";
-        if (iconColor) {
-          iconStyle = " fill route"+iconColor;
-        }
 
         var middleIconRectOptions = TheGraph.merge(TheGraph.config.menu.iconRect, {});
         var middleIcon = TheGraph.factories.menu.createMenuMiddleIconRect.call(this, middleIconRectOptions);
 
         var middleIconTextOptions = {
-          className: "icon contextNodeIcon"+iconStyle,
+          className: classNames(
+            css.icon,
+            css.contextNodeIcon,
+            iconColor && css.fill,
+            iconColor && css["route" + iconColor]
+          ),
           children: TheGraph.FONT_AWESOME[ (this.props.icon ? this.props.icon : menu.icon) ]
         };
         middleIconTextOptions = TheGraph.merge(TheGraph.config.menu.iconText, middleIconTextOptions);
@@ -251,7 +254,7 @@ module.exports.register = function (context) {
     container: {},
     rect: {
       ref: "rect",
-      className: "contextModalBackground"
+      className: css.contextModalBackground
     }
   };
 

@@ -1,28 +1,30 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
+const classNames = require('classnames')
 module.exports.register = function (context) {
 
   var TheGraph = context.TheGraph;
+  let css = context.TheGraph.css
 
   TheGraph.config.graph = {
     container: {},
     groupsGroup: {
-      className: "groups"
+      className: css.groups
     },
     edgesGroup: {
-      className: "edges"
+      className: css.edges
     },
     iipsGroup: {
-      className: "iips"
+      className: css.iips
     },
     nodesGroup: {
-      className: "nodes"
+      className: css.nodes
     },
     inportsGroup: {
-      className: "exInports"
+      className: css.exInports
     },
     outportsGroup: {
-      className: "exOutports"
+      className: css.exOutports
     },
     node: {},
     iip: {},
@@ -879,7 +881,7 @@ module.exports.register = function (context) {
       var selectedClass = (this.state.forceSelection ||
                            selectedIds.length>0) ? ' selection' : '';
 
-      var containerOptions = TheGraph.merge(TheGraph.config.graph.container, { className: 'graph' + selectedClass });
+      var containerOptions = TheGraph.merge(TheGraph.config.graph.container, { className: classNames(css.graph, selectedClass) });
       return TheGraph.factories.graph.createGraphContainerGroup.call(this, containerOptions, containerContents);
 
     }

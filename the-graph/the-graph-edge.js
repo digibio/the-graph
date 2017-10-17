@@ -1,25 +1,27 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
+const classNames = require('classnames')
 var TooltipMixin = require('./mixins').Tooltip;
 
 module.exports.register = function (context) {
 
   var TheGraph = context.TheGraph;
+  let css = TheGraph.css
 
   TheGraph.config.edge = {
     curve: TheGraph.config.nodeSize,
     container: {
-      className: "edge"
+      className: css.edge
     },
     backgroundPath: {
-      className: "edgeBackground"
+      className: css.edgeBackground
     },
     foregroundPath: {
       ref: "route",
-      className: "edgeForeground stroke route"
+      className: classNames(css.edgeForeground, css.stroke, css.route)
     },
     touchPath: {
-      className: "edgeTouch",
+      className: css.edgeTouch,
       ref: "touch"
     }
   };
@@ -206,9 +208,9 @@ module.exports.register = function (context) {
       var touchPath = TheGraph.factories.edge.createEdgeTouchPath(touchPathOptions);
 
       var containerOptions = {
-        className: "edge"+
-          (this.props.selected ? " selected" : "")+
-          (this.props.animated ? " animated" : ""),
+        className: classNames(css.edge,
+          (this.props.selected ? css.selected : ""),
+          (this.props.animated ? css.animated : "")),
         title: this.props.label
       };
 
@@ -265,12 +267,12 @@ module.exports.register = function (context) {
         function (point) {return point.join(',');}).join(' ');
       var arrowBg = TheGraph.factories.edge.createArrow({
         points: pointsArray,
-        className: 'arrowBackground'
+        className: css.arrowBackground
       });
 
       var arrow = TheGraph.factories.edge.createArrow({
         points: pointsArray,
-        className: 'arrow fill route' + this.props.route
+        className: classNames(css.arrow, css.fill,css['route' + this.props.route])
       });
 
       return TheGraph.factories.edge.createEdgeGroup(containerOptions,

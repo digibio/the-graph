@@ -3,16 +3,17 @@ const ReactDOM = require('react-dom')
 module.exports.register = function (context) {
 
   var TheGraph = context.TheGraph;
+  let css = context.TheGraph.css
 
   TheGraph.config.iip = {
     container: {
-      className: "iip"
+      className: css.iip
     },
     path: {
-      className: "iipPath"
+      className: css.iipPath
     },
     text: {
-      className: "iipInfo",
+      className: css.iipInfo,
       height: 5,
       halign: "right"
     }

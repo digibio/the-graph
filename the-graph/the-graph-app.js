@@ -1,5 +1,6 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
+const classNames = require('classnames')
 
 var hammerhacks = require('./hammer.js');
 
@@ -54,32 +55,33 @@ var readOnlyActions = [70, 83, 27];
 
 module.exports.register = function (context) {
 
-  var TheGraph = context.TheGraph;
+  let TheGraph = context.TheGraph;
+  let css = context.TheGraph.css
 
   TheGraph.config.app = {
     container: {
-      className: "theGraphApp",
+      className: classNames(css.theGraphApp, css.theGraphLight),
       name: "app"
     },
     canvas: {
       ref: "canvas",
-      className: "appCanvas"
+      className: css.appCanvas
     },
     svg: {
-      className: "appSvg",
+      className: css.appSvg,
       ref: 'svg',
     },
     svgGroup: {
-      className: "view"
+      className: css.view
     },
     graph: {
       ref: "graph"
     },
     tooltip: {
-      ref: "tooltip"
+      ref: css.tooltip
     },
     modal: {
-      className: "context"
+      className: css.context
     }
   };
 

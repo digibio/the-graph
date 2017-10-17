@@ -3,10 +3,11 @@ const ReactDOM = require('react-dom')
 module.exports.register = function (context) {
 
   var TheGraph = context.TheGraph;
+  let css = context.TheGraph.css
 
   TheGraph.config.nodeMenu = {
     container: {
-      className: "contextNode"
+      className: css.contextNode
     },
     inports: {},
     outports: {},

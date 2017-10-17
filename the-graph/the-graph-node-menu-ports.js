@@ -1,19 +1,21 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
+const classNames = require('classnames')
 module.exports.register = function (context) {
 
   var TheGraph = context.TheGraph;
+  let css = context.TheGraph.css
 
   TheGraph.config.nodeMenuPorts = {
     container: {},
     linesGroup: {
-      className: "contextPortsLines"
+      className: css.contextPortsLines
     },
     portsGroup: {
-      className: "contextPortsPorts"
+      className: css.contextPortsPorts
     },
     portPath: {
-      className: "contextPortPath"
+      className: css.contextPortPath
     },
     nodeMenuPort: {}
   };
@@ -87,7 +89,7 @@ module.exports.register = function (context) {
 
       var containerContents = [linesGroup, portsGroup];
       var containerOptions = {
-        className: "contextPorts contextPorts-"+(this.props.isIn ? "In" : "Out"),
+        className: classNames(css.contextPorts, css[this.props.isIn ? "contextPortsIn" : "contextPortsOut"]),
         transform: transform
       };
       containerOptions = TheGraph.merge(TheGraph.config.nodeMenuPorts.container, containerOptions);

@@ -1,8 +1,10 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
+const classNames = require('classnames')
 module.exports.register = function (context) {
 
   var TheGraph = context.TheGraph;
+  let css = TheGraph.css
 
   TheGraph.config.nodeMenuPort = {
     container: {},
@@ -58,7 +60,7 @@ module.exports.register = function (context) {
       var highlight = (highlightPort && highlightPort.isIn === this.props.isIn && highlightPort.type === this.props.port.type);
 
       var rectOptions = {
-        className: "contextPortBackground"+(highlight ? " highlight" : ""),
+        className: classNames(css.contextPortBackground, (highlight ? css.highlight : "")),
         x: this.props.x + (this.props.isIn ? -bgWidth : 0),
         y: this.props.y - TheGraph.contextPortSize/2,
         width: bgWidth
@@ -68,7 +70,7 @@ module.exports.register = function (context) {
       var rect = TheGraph.factories.nodeMenuPort.createNodeMenuBackgroundRect.call(this, rectOptions);
 
       var circleOptions = {
-        className: "contextPortHole stroke route"+this.props.route,
+        className: classNames(css.contextPortHole, css.stroke, css["route"+this.props.route]),
         cx: this.props.x,
         cy: this.props.y,
       };
@@ -76,7 +78,7 @@ module.exports.register = function (context) {
       var circle = TheGraph.factories.nodeMenuPort.createNodeMenuPortCircle.call(this, circleOptions);
 
       var textOptions = {
-        className: "contextPortLabel fill route"+this.props.route,
+        className: classNames(css.contextPortLabel, css.fill, css["route"+this.props.route]),
         x: this.props.x + (this.props.isIn ? -20 : 20),
         y: this.props.y,
         children: this.props.label.replace(/(.*)\/(.*)(_.*)\.(.*)/, '$2.$4')
@@ -87,7 +89,9 @@ module.exports.register = function (context) {
 
       var containerContents = [rect, circle, text];
 
-      var containerOptions = TheGraph.merge(TheGraph.config.nodeMenuPort.container, { className: "contextPort click contextPort"+(this.props.isIn ? "In" : "Out") });
+      var containerOptions = TheGraph.merge(
+        TheGraph.config.nodeMenuPort.container,
+        { className: classNames(css.contextPort, css.click, css[this.props.isIn ? "contextPortIn" : "contextPortOut"]) });
       return TheGraph.factories.nodeMenuPort.createNodeMenuPortGroup.call(this, containerOptions, containerContents);
 
     }

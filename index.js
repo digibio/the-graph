@@ -1,6 +1,9 @@
-import lightCss from './themes/light.css'
+import lightCss from './themes/the-graph-light.css'
+
 // Module object
 var TheGraph = {};
+
+TheGraph.css = lightCss
 
 // Bundle and expose fbp-graph as public API
 TheGraph.fbpGraph = require('fbp-graph');
@@ -52,6 +55,5 @@ TheGraph.library = require('./the-graph/the-graph-library.js');
 TheGraph.clipboard = require("./the-graph-editor/clipboard.js");
 TheGraph.editor = require('./the-graph-editor/menus.js');
 
-TheGraph.lightCss = lightCss.theGraphLight
 
 module.exports = TheGraph;

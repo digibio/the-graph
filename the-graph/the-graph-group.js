@@ -1,22 +1,24 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
+const classNames = require('classnames')
 module.exports.register = function (context) {
 
   var TheGraph = context.TheGraph;
+  let css = TheGraph.css
 
   TheGraph.config.group = {
     container: {
-      className: "group"
+      className: css.group
     },
     boxRect: {
       rx: TheGraph.config.nodeRadius,
       ry: TheGraph.config.nodeRadius
     },
     labelText: {
-      className: "groupLabel"
+      className: css.groupLabel
     },
     descriptionText: {
-      className: "groupDescription"
+      className: css.groupDescription
     }
   };
 
@@ -137,14 +139,18 @@ module.exports.register = function (context) {
       var x = this.props.minX - TheGraph.config.nodeWidth / 2;
       var y = this.props.minY - TheGraph.config.nodeHeight / 2;
       var color = (this.props.color ? this.props.color : 0);
-      var selection = (this.props.isSelectionGroup ? ' selection drag' : '');
 
       var boxRectOptions = {
         x: x,
         y: y,
         width: this.props.maxX - x + TheGraph.config.nodeWidth*0.5,
         height: this.props.maxY - y + TheGraph.config.nodeHeight*0.75,
-        className: "groupBox color"+color + selection,
+        className: classNames(
+          css.groupBox,
+          css["color"+color],
+          this.props.isSelectionGroup && css.selection,
+          this.props.isSelectionGroup && css.drag
+        ),
       };
       boxRectOptions = TheGraph.merge(TheGraph.config.group.boxRect, boxRectOptions);
       var boxRect =  TheGraph.factories.group.createGroupBoxRect.call(this, boxRectOptions);
@@ -168,7 +174,7 @@ module.exports.register = function (context) {
       // When moving, expand bounding box of element
       // to catch events when pointer moves faster than we can move the element
       var eventOptions = {
-        className: 'eventcatcher drag',
+        className: classNames(css.eventcatcher, css.drag),
         ref: 'events',
       };
       if (this.props.isSelectionGroup) {

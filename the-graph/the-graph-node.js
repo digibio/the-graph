@@ -1,25 +1,27 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
+const classNames = require('classnames')
 var TooltipMixin = require('./mixins').Tooltip;
 
 module.exports.register = function (context) {
 
   var TheGraph = context.TheGraph;
+  let css = TheGraph.css
 
   // Initialize namespace for configuration and factory functions.
   TheGraph.config.node = {
     snap: TheGraph.config.nodeSize,
     container: {},
     background: {
-      className: "nodeBackground"
+      className: css.nodeBackground
     },
     border: {
-      className: "nodeBorder drag",
+      className: classNames(css.nodeBorder, css.drag),
       rx: TheGraph.config.nodeRadius,
       ry: TheGraph.config.nodeRadius
     },
     innerRect: {
-      className: "nodeRect drag",
+      className: classNames(css.nodeRect, css.drag),
       x: 3,
       y: 3,
       rx: TheGraph.config.nodeRadius - 2,
@@ -27,34 +29,34 @@ module.exports.register = function (context) {
     },
     icon: {
       ref: "icon",
-      className: "icon nodeIcon drag"
+      className: classNames(css.icon, css.nodeIcon, css.drag)
     },
     iconsvg: {
-      className: "icon nodeIcon drag"
+      className: classNames(css.icon, css.nodeIcon, css.drag)
     },
     inports: {
-      className: "inports"
+      className: css.inports
     },
     outports: {
-      className: "outports"
+      className: css.outports
     },
     labelBackground: {
-      className: "nodeLabel"
+      className: css.nodeLabel
     },
     labelRect: {
-      className: "textBackgroundRect"
+      className: css.textBackgroundRect
     },
     labelText: {
-      className: "nodeLabel"
+      className: css.nodeLabel
     },
     sublabelBackground: {
-      className: "nodeSublabelBackground"
+      className: css.nodeSublabelBackground
     },
     sublabelRect: {
-      className: "textBackgroundRect"
+      className: css.textBackgroundRect
     },
     sublabelText: {
-      className: "nodeSublabel"
+      className: css.nodeSublabel
     }
   };
 
@@ -506,7 +508,7 @@ module.exports.register = function (context) {
       var eventSize = this.props.width * 12 / scale;
       var eventOptions = {
         r: eventSize,
-        className: 'eventcatcher',
+        className: css.eventcatcher,
       };
       var eventRect = TheGraph.factories.createCircle(eventOptions);
 
@@ -525,9 +527,12 @@ module.exports.register = function (context) {
       }
 
       var nodeOptions = {
-        className: "node drag"+
-          (this.props.selected ? " selected" : "")+
-          (this.props.error ? " error" : ""),
+        className: classNames(
+          css.node,
+          css.drag,
+          (this.props.selected ? css.selected : "")+
+          (this.props.error ? css.error : "")
+        ),
         name: this.props.nodeID,
         key: this.props.nodeID,
         title: label,
