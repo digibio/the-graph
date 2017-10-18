@@ -5,7 +5,7 @@ const defaultFactories = require('./factories.js');
 const merge = require('./merge.js');
 
 // not modular;
-const css = require('../themes/the-graph-light.css')
+const css = require('../themes/the-graph-light.styl')
 
 var config = {
   container: {},
