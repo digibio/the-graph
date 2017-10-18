@@ -11,42 +11,37 @@
   },
   "dependencies": {
     "@pleasetrythisathome/react.animate": "0.0.4",
+    "babel-preset-env": "^1.6.1",
     "classnames": "^2.2.5",
     "ease-component": "^1.0.0",
     "fbp-graph": "^0.1.0",
     "font-awesome": "^4.6.3",
+    "font-awesome-sass-loader": "^2.0.1",
     "hammerjs": "^2.0.8",
     "klayjs-noflo": "^0.3.1",
+    "node-sass": "^4.5.3",
     "tv4": "^1.3.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "chai": "^4.0.0",
     "coffee-script": "^1.12.2",
     "coffeeify": "^2.0.1",
+    "file-loader": "^1.1.5",
     "glob": "^7.0.6",
-    "grunt": "~1.0.1",
-    "grunt-browserify": "~5.0.0",
-    "grunt-contrib-coffee": "^1.0.0",
-    "grunt-contrib-connect": "^1.0.2",
-    "grunt-contrib-jshint": "~1.1.0",
-    "grunt-contrib-watch": "~1.0.0",
-    "grunt-exec": "~2.0.0",
-    "grunt-saucelabs": "^9.0.0",
     "mocha": "^3.2.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "stylus": "~0.54.5",
+    "url-loader": "^0.6.2",
     "webpack": "^3.8.1"
   },
   "scripts": {
-    "start": "grunt dev",
-    "test": "grunt test",
-    "build": "grunt build",
-    "preversion": "grunt test",
-    "postversion": "git push && git push --tags"
+    "build": "WEBPACK_ENV=build webpack",
+    "dev": "WEBPACK_ENV=dev webpack --progress --colors --watch",
+    "test": "mocha --compilers js:babel-core/register --colors -w ./test/*.spec.js"
   },
   "keywords": [
     "graph"
