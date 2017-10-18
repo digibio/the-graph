@@ -1,6 +1,6 @@
 # Fork information
 
-This is a massive refactor of the-graph. So massive that I decided to rename it to "react-webgraph" (the 'the' in 'the-graph' bugs me a little). It is unlikely to ever become a PR, with so many incompabibilities.
+This is a massive refactor of the-graph. So massive that I decided to rename it to "react-webgraph" (the 'the' in 'the-graph' bugs me a little). I will see in time if I can make it a PR.
 
 The-Graph is a pretty library to manipulate svg graphs. However, when I tried to inject this into my own WebPack-driven React project as a regular component, this failed. It was not designed for that and ships with it's own (very old) version of react.
 
@@ -9,7 +9,7 @@ So this started as a hack to be able to use it anyway as a component in a React 
 So far so good; there is a working implementation of the basic demo as a webpack project in **react-webgraph-example**.
 
 Tests will definitely not work anymore, I completely ignored those for now. I just needed something fast.
-It can not be used in React >=16.x because there are breaking deprecations that I did not refactor yet. (It jumped from React 0.15.1 or something like that)
+It can not be used in React 16.x because there are breaking deprecations that I did not refactor yet. 
 
 Working on getting the styles/classNames right now, most of it is workable atm using modular class injection.
 
