@@ -1,6 +1,6 @@
 {
-  "name": "react-webgraph",
-  "version": "0.10.5",
+  "name": "the-graph",
+  "version": "0.10.5-fork",
   "description": "flow-based programming graph editing",
   "author": "Forrest Oliphant, the Grid",
   "license": "MIT",
@@ -17,7 +17,9 @@
     "font-awesome": "^4.6.3",
     "hammerjs": "^2.0.8",
     "klayjs-noflo": "^0.3.1",
-    "tv4": "^1.3.0"
+    "tv4": "^1.3.0",
+    "react": "<16.0.0",
+    "react-dom": "<16.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

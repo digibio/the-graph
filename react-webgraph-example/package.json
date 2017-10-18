@@ -6,6 +6,9 @@
   "scripts": {
     "start": "webpack-dev-server"
   },
+  "peerDependencies": {
+    "react-webgraph": "file:.."
+  },
   "dependencies": {
     "html-webpack-plugin": "^2.30.1",
     "path": "^0.12.7",
