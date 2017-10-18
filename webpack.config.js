@@ -42,6 +42,10 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
       },
       {
+        test: /\.styl$/,
+        loader: 'css-loader!stylus-loader?paths=node_modules/bootstrap-stylus/stylus/'
+      },
+      {
         test: /\.css$/,
         loader: 'style-loader'
       },

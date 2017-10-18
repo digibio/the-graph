@@ -1,4 +1,4 @@
-import lightCss from './themes/the-graph-light.css'
+import lightCss from './themes/the-graph-light.styl'
 require("font-awesome-sass-loader");
 
 // Module object
