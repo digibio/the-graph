@@ -1,20 +1,19 @@
 # Fork information
 
-This is a massive refactor of the-graph. So massive that I decided to rename it to "react-webgraph". It is unlikely to be ever a PR, so much changes.
+This is a massive refactor of the-graph. So massive that I decided to rename it to "react-webgraph" (the 'the' in 'the-graph' bugs me a little). It is unlikely to ever become a PR, with so many incompabibilities.
 
-The-Graph is a pretty library to manipulate svg graphs. However, when I tried to inject this into my own WebPack-driven React project as
-a regular component, this failed; the react version was totally outdated, and it was never bundled to be used in such a way.
+The-Graph is a pretty library to manipulate svg graphs. However, when I tried to inject this into my own WebPack-driven React project as a regular component, this failed. It was not designed for that and ships with it's own (very old) version of react.
 
-So this started as a hack to be able to use it anyway as a component in a modern React environment.
+So this started as a hack to be able to use it anyway as a component in a React environment.
 
 So far so good; there is a working implementation of the basic demo as a webpack project in **react-webgraph-example**.
 
 Tests will definitely not work anymore, I completely ignored those for now. I just needed something fast.
-It can not be used in React >16.x because there are breaking deprecations that I did not hack out yet. (It jumped from React 0.15.1 or something like that)
+It can not be used in React >=16.x because there are breaking deprecations that I did not refactor yet. (It jumped from React 0.15.1 or something like that)
 
-Working on getting the styles/classNames right now, most of it is workable atm, using modular class injection.
+Working on getting the styles/classNames right now, most of it is workable atm using modular class injection.
 
-A lot will still have to be done for this to be completely up-to-date and very pleasant to work with. Over time I will refactor or rewrite most of the code, most likely, and give it my own twist; easier to configure, override styles, etc.
+A lot will still have to be done for this to be completely up-to-date. Over time I will most likely refactor or rewrite lots of the code, and give it my own twist; easier to configure, override styles, etc.
 
 below the original Readme.md
 
