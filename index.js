@@ -1,5 +1,5 @@
 import lightCss from './themes/the-graph-light.styl'
-require("font-awesome-sass-loader");
+import 'font-awesome/scss/font-awesome.scss';
 
 // Module object
 var TheGraph = {};

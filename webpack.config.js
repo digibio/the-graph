@@ -13,7 +13,10 @@ module.exports = {
     // the advised hack to make fs work within webpack
     fs: 'empty'
   },
-  entry: './index.js',
+  entry: [
+    "font-awesome/scss/font-awesome.scss",
+    './index.js',
+  ],
   output: {
     path: path.resolve(__dirname, 'lib'),
     filename: outputFileName,
@@ -44,25 +47,12 @@ module.exports = {
           localIdentName: '[name]__[local]___[hash:base64:5]'
         }
       },
-      {
-        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 10000,
-              mimetype: 'application/font-woff'
-            }
-          }
-        ]
-      },
-      {
-        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        use: [
-          { loader: 'file-loader' }
-        ]
-      }
-    ]
+      {test: /\.scss?$/, loaders: ['style-loader', 'css-loader', 'sass-loader']},
+      {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader?mimetype=image/svg+xml'},
+      {test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader?mimetype=application/font-woff"},
+      {test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader?mimetype=application/font-woff"},
+      {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader?mimetype=application/octet-stream"},
+      {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader"},
+    ],
   },
-  // plugins: plugins
 }
