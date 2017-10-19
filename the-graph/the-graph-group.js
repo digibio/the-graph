@@ -1,5 +1,6 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
+const createClass = require('create-react-class')
 const classNames = require('classnames')
 module.exports.register = function (context) {
 
@@ -31,7 +32,7 @@ module.exports.register = function (context) {
 
   // Group view
 
-  TheGraph.Group = React.createFactory( React.createClass({
+  TheGraph.Group = React.createFactory( createClass({
     displayName: "TheGraphGroup",
     getInitialState: function () {
         return {

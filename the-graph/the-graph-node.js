@@ -1,6 +1,7 @@
 const React = require('react')
-const FontAwesome = require('react-fontawesome');
 const ReactDOM = require('react-dom')
+const createClass = require('create-react-class')
+const FontAwesome = require('react-fontawesome');
 const classNames = require('classnames')
 var TooltipMixin = require('./mixins').Tooltip;
 
@@ -87,7 +88,7 @@ module.exports.register = function (context) {
   }
 
   // Node view
-  TheGraph.Node = React.createFactory( React.createClass({
+  TheGraph.Node = React.createFactory( createClass({
     displayName: "TheGraphNode",
     mixins: [
       TooltipMixin

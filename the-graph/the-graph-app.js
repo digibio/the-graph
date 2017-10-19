@@ -1,5 +1,6 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
+const createClass = require('create-react-class')
 const classNames = require('classnames')
 
 var hammerhacks = require('./hammer.js');
@@ -136,7 +137,7 @@ module.exports.register = function (context) {
     return null;
   }
 
-  TheGraph.App = React.createFactory( React.createClass({
+  TheGraph.App = React.createFactory( createClass({
     displayName: "TheGraphApp",
     mixins: mixins,
     getDefaultProps: function() {

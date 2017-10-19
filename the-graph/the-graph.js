@@ -1,5 +1,5 @@
 const React = require('react')
-React.createClass = require('create-react-class')
+const createClass = require('create-react-class')
 const classNames = require('classnames')
 module.exports.register = function (context) {
 
@@ -218,7 +218,7 @@ module.exports.register = function (context) {
   };
 
   // Reusable React classes
-  TheGraph.SVGImage = React.createFactory( React.createClass({
+  TheGraph.SVGImage = React.createFactory( createClass({
     displayName: "TheGraphSVGImage",
     render: function() {
         var html = '<image ';
@@ -236,7 +236,7 @@ module.exports.register = function (context) {
     }
   }));
 
-  TheGraph.TextBG = React.createFactory( React.createClass({
+  TheGraph.TextBG = React.createFactory( createClass({
     displayName: "TheGraphTextBG",
     render: function() {
       var text = this.props.text;

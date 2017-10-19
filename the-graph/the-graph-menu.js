@@ -1,5 +1,6 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
+const createClass = require('create-react-class')
 const classNames = require('classnames')
 var arcs = require('./arcs');
 
@@ -127,7 +128,7 @@ module.exports.register = function (context) {
     return TheGraph.factories.menu.createMenuGroup.call(this, containerOptions);
   }
 
-  TheGraph.Menu = React.createFactory( React.createClass({
+  TheGraph.Menu = React.createFactory( createClass({
     displayName: "TheGraphMenu",
     radius: TheGraph.config.menu.radius,
     getInitialState: function() {
@@ -264,7 +265,7 @@ module.exports.register = function (context) {
   };
 
 
-  TheGraph.ModalBG = React.createFactory( React.createClass({
+  TheGraph.ModalBG = React.createFactory( createClass({
     displayName: "TheGraphModalBG",
     componentDidMount: function () {
       var domNode = ReactDOM.findDOMNode(this);

@@ -1,5 +1,6 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
+const createClass = require('create-react-class')
 module.exports.register = function (context) {
 
   var TheGraph = context.TheGraph;
@@ -32,7 +33,7 @@ module.exports.register = function (context) {
     return TheGraph.Menu(options);
   }
 
-  TheGraph.NodeMenu = React.createFactory( React.createClass({
+  TheGraph.NodeMenu = React.createFactory( createClass({
     displayName: "TheGraphNodeMenu",
     radius: 72,
     stopPropagation: function (event) {

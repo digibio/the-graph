@@ -1,5 +1,6 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
+const createClass = require('create-react-class')
 
 var thumb = require('../the-graph-thumb/the-graph-thumb.js');
 
@@ -116,7 +117,7 @@ function renderViewboxFromProps(context, viewbox, thumbInfo, props) {
 }
 
 // https://toddmotto.com/react-create-class-versus-component/
-var Component = React.createClass({
+var Component = createClass({
   propTypes: {
   },
   getDefaultProps: function() {

@@ -1,5 +1,6 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
+const createClass = require('create-react-class')
 module.exports.register = function (context) {
 
   var TheGraph = context.TheGraph;
@@ -35,7 +36,7 @@ module.exports.register = function (context) {
 
   // Edge view
 
-  TheGraph.IIP = React.createFactory( React.createClass({
+  TheGraph.IIP = React.createFactory( createClass({
     displayName: "TheGraphIIP",
     shouldComponentUpdate: function (nextProps, nextState) {
       // Only rerender if changed

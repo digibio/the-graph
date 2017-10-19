@@ -1,5 +1,6 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
+const createClass = require('create-react-class')
 const classNames = require('classnames')
 const defaultFactories = require('./factories.js');
 const merge = require('./merge.js');
@@ -31,7 +32,7 @@ var factories = {
 };
 
 // Port view
-let Tooltip = React.createFactory( React.createClass({
+let Tooltip = React.createFactory( createClass({
   displayName: "TheGraphTooltip",
   render: function() {
 
