@@ -1,4 +1,5 @@
 const React = require('react')
+React.createClass = require('create-react-class')
 const classNames = require('classnames')
 module.exports.register = function (context) {
 

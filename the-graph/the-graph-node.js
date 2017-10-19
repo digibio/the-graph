@@ -1,4 +1,5 @@
 const React = require('react')
+const FontAwesome = require('react-fontawesome');
 const ReactDOM = require('react-dom')
 const classNames = require('classnames')
 var TooltipMixin = require('./mixins').Tooltip;
@@ -443,11 +444,7 @@ module.exports.register = function (context) {
         return TheGraph.factories.node.createNodePort(props);
       }.bind(this));
 
-      // Node Icon
-      var icon = TheGraph.FONT_AWESOME[ this.props.icon ];
-      if (!icon) {
-        icon = TheGraph.FONT_AWESOME.cog;
-      }
+      let icon = <FontAwesome name={this.props.icon || 'cog'} />
 
       var iconContent;
       if (this.props.iconsvg && this.props.iconsvg !== "") {

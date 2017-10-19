@@ -1,8 +1,7 @@
 import React from 'react';
 // import theGraphLight from './node_modules/the-graph/themes/the-graph-light.css'
 
-import TheGraph from 'the-graph'
-// import {config, App, fbpGraph, Node, lightCss} from 'react-webgraph'
+import TheGraph from '../../../lib/the-graph'
 
 let App = TheGraph.App
 let fbpGraph = TheGraph.fbpGraph

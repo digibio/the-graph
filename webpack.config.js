@@ -14,7 +14,6 @@ module.exports = {
     fs: 'empty'
   },
   entry: [
-    "font-awesome/scss/font-awesome.scss",
     './index.js',
   ],
   output: {

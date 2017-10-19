@@ -1,5 +1,4 @@
 import lightCss from './themes/the-graph-light.styl'
-// import 'font-awesome/scss/font-awesome.scss';
 
 // Module object
 var TheGraph = {};
@@ -34,7 +33,6 @@ require("./the-graph/the-graph-iip.js").register(g);
 require("./the-graph/the-graph-group.js").register(g);
 
 require("./the-graph/the-graph-menu.js").register(g);
-require("./the-graph/font-awesome-unicode-map.js").register(g);
 
 
 TheGraph.tooltip = require("./the-graph/the-graph-tooltip.js");
