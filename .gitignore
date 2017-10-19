@@ -9,4 +9,3 @@ npm-debug.log
 themes/*.css
 yarn-error.log
 package-lock.json
-lib/
