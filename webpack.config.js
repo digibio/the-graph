@@ -4,9 +4,8 @@ const webpack = require('webpack')
 const env = process.env.WEBPACK_ENV;
 let plugins = [], outputFileName
 
-const libraryName = 'the-graph'
-outputFileName = libraryName + '.js';
-
+const libraryName = 'theGraph'
+const fileName = 'the-graph.js'
 
 module.exports = {
   node: {
@@ -18,10 +17,26 @@ module.exports = {
   ],
   output: {
     path: path.resolve(__dirname, 'lib'),
-    filename: outputFileName,
+    filename: fileName,
     library: libraryName,
     libraryTarget: 'umd',
     umdNamedDefine: true
+  },
+  externals: {
+    react: {
+      root: 'React',
+      commonjs2: 'react',
+      commonjs: 'react',
+      amd: 'react',
+      umd: 'react',
+    },
+    'react-dom': {
+      root: 'ReactDOM',
+      commonjs2: 'react-dom',
+      commonjs: 'react-dom',
+      amd: 'react-dom',
+      umd: 'react-dom',
+    },
   },
   module: {
     loaders: [

@@ -1,7 +1,9 @@
 import React from 'react';
 // import theGraphLight from './node_modules/the-graph/themes/the-graph-light.css'
-
-import TheGraph from '../../../lib/the-graph'
+const R = require('react')
+R.bla()
+import '../../../lib/hi'
+// import TheGraph from '../../../lib/the-graph'
 
 let App = TheGraph.App
 let fbpGraph = TheGraph.fbpGraph
