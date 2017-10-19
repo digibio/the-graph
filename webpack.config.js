@@ -1,24 +1,11 @@
 const path = require('path');
 const webpack = require('webpack')
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+// const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const env = process.env.WEBPACK_ENV;
 let plugins = [], outputFileName
 
 const libraryName = 'the-graph'
-
-if(env === 'build') {
-  plugins.push(new UglifyJSPlugin({
-    parallel: {
-      cache: true,
-      workers: 4 // for e.g
-    },
-    sourceMap: true
-  }));
-  outputFileName = libraryName + '.min.js';
-}
-else {
-  outputFileName = libraryName + '.js';
-}
+outputFileName = libraryName + '.js';
 
 
 module.exports = {
@@ -77,5 +64,5 @@ module.exports = {
       }
     ]
   },
-  plugins: plugins
+  // plugins: plugins
 }
