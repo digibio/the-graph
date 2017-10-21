@@ -46,10 +46,6 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
       },
       {
-        test: /\.styl$/,
-        loader: 'css-loader!stylus-loader?paths=node_modules/bootstrap-stylus/stylus/'
-      },
-      {
         test: /\.css$/,
         loader: 'style-loader'
       },
@@ -60,7 +56,7 @@ module.exports = {
           modules: true,
           localIdentName: '[name]__[local]___[hash:base64:5]'
         }
-      },
-    ],
+      }
+    ]
   },
 }

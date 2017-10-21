@@ -16,6 +16,7 @@
     "css-loader": "^0.28.7",
     "ease-component": "^1.0.0",
     "fbp-graph": "^0.1.0",
+    "grunt": "^1.0.1",
     "hammerjs": "^2.0.8",
     "klayjs-noflo": "^0.3.1",
     "react-fontawesome": "^1.6.1",

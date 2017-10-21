@@ -12,7 +12,7 @@
     "path": "^0.12.7",
     "react": "<16.0.0",
     "react-dom": "<16.0.0",
-    "the-graph": "https://github.com/femans/the-graph.git",
+    "the-graph": "file:../lib/the-graph.js",
     "webpack": "^3.5.6",
     "webpack-dev-server": "^2.7.1"
   },

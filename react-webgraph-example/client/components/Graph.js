@@ -3,7 +3,8 @@ import TheGraph from 'the-graph'
 
 let App = TheGraph.App
 let fbpGraph = TheGraph.fbpGraph
-let lightCss = TheGraph.css
+let css = TheGraph.css
+console.log(css)
 
 const library = {
   basic: {
@@ -103,7 +104,7 @@ export default class Graph extends React.Component {
   render() {
     return (
       <div>
-        <div className={lightCss}>
+        <div className={css}>
           <App
             readonly = {false}
             height = {this.props.height}
