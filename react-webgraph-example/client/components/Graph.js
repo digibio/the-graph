@@ -3,8 +3,7 @@ import TheGraph from 'the-graph'
 
 let App = TheGraph.App
 let fbpGraph = TheGraph.fbpGraph
-let css = TheGraph.css
-console.log(css)
+let css = TheGraph.css.theGraphLight
 
 const library = {
   basic: {

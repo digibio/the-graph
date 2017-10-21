@@ -4,7 +4,7 @@ import {theGraphDark} from './themes/the-graph-dark.css'
 // Module object
 var TheGraph = {};
 
-TheGraph.css = {light: theGraphLight, dark: theGraphDark}
+TheGraph.css = {theGraphDark, theGraphLight}
 
 // Bundle and expose fbp-graph as public API
 TheGraph.fbpGraph = require('fbp-graph');
