@@ -103,7 +103,7 @@ export default class Graph extends React.Component {
   render() {
     return (
       <div>
-        <div className={css}>
+        <div className={css.theGraphLight}>
           <App
             readonly = {false}
             height = {this.props.height}

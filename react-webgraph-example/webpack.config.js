@@ -41,4 +41,8 @@ module.exports = {
     ]
   },
   plugins: [HtmlWebpackPluginConfig],
+  resolve: { modules: [
+      path.join(__dirname, "node_modules")
+    ]
+  },
 }

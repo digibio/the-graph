@@ -1,10 +1,9 @@
-import {theGraphLight} from './themes/the-graph-light.css'
-import {theGraphDark} from './themes/the-graph-dark.css'
+import css from './themes/the-graph-light.css'
 
 // Module object
 var TheGraph = {};
 
-TheGraph.css = {theGraphDark, theGraphLight}
+TheGraph.css = css
 
 // Bundle and expose fbp-graph as public API
 TheGraph.fbpGraph = require('fbp-graph');
@@ -36,7 +35,7 @@ require("./the-graph/the-graph-group.js").register(g);
 require("./the-graph/the-graph-menu.js").register(g);
 
 
-TheGraph.tooltip = require("./the-graph/the-graph-tooltip.js");
+TheGraph.tooltip = require("./the-graph/the-graph-tooltip.js")(TheGraph);
 // compat
 TheGraph.Tooltip = TheGraph.tooltip.Tooltip;
 TheGraph.config.tooltip = TheGraph.tooltip.config;
