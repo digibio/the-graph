@@ -50,11 +50,11 @@ module.exports = {
         loader: 'style-loader'
       },
       {
-        test: /\.css$/,
+        test: /themes\/the-graph-.*\.css$/,
         loader: 'css-loader',
         query: {
           modules: true,
-          localIdentName: '[name]__[local]___[hash:base64:5]'
+          localIdentName: '[local]'
         }
       }
     ]
