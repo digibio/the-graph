@@ -103,15 +103,13 @@ export default class Graph extends React.Component {
   render() {
     return (
       <div>
-        <div className={css.theGraphLight}>
-          <App
-            readonly = {false}
-            height = {this.props.height}
-            width = {this.props.width}
-            graph = {this.state.graph}
-            library = {library}
-          />
-        </div>
+        <App
+          readonly = {false}
+          height = {this.props.height}
+          width = {this.props.width}
+          graph = {this.state.graph}
+          library = {library}
+        />
         <div style={{position: 'absolute', top: 0, left: 0}}>
           <button onClick={this.randomGraph.bind(this)}>random graph</button>
           <button onClick={this.addNodeClick.bind(this)} >add node</button>
