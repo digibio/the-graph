@@ -6,7 +6,6 @@ const classNames = require('classnames')
 var TooltipMixin = require('./mixins').Tooltip;
 
 module.exports.register = function (context) {
-
   var TheGraph = context.TheGraph;
   let css = TheGraph.css
 
@@ -446,6 +445,7 @@ module.exports.register = function (context) {
       }.bind(this));
 
       let icon = <FontAwesome name={this.props.icon || 'cog'} />
+      console.log("icon",icon)
 
       var iconContent;
       if (this.props.iconsvg && this.props.iconsvg !== "") {

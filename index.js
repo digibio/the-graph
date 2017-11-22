@@ -1,4 +1,4 @@
-import css from './themes/the-graph-light.css'
+import css from './themes/the-graph-dark.css'
 
 // Module object
 var TheGraph = {};

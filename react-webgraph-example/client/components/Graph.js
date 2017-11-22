@@ -1,5 +1,5 @@
 import React from 'react';
-import TheGraph from 'the-graph'
+import TheGraph from '../../../index'
 
 let App = TheGraph.App
 let fbpGraph = TheGraph.fbpGraph
